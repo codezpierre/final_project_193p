@@ -13,6 +13,16 @@
 		05178F7A1CE654F700232091 /* FinalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05178F781CE654F700232091 /* FinalProject.xcdatamodeld */; };
 		05178F7C1CE654F700232091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05178F7B1CE654F700232091 /* Assets.xcassets */; };
 		05178F7F1CE654F700232091 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05178F7D1CE654F700232091 /* LaunchScreen.storyboard */; };
+		05178F891CE656D800232091 /* MajorCitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F881CE656D800232091 /* MajorCitiesTableViewController.swift */; };
+		05178F8B1CE656FA00232091 /* MajorCitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F8A1CE656FA00232091 /* MajorCitiesTableViewCell.swift */; };
+		05178F8D1CE65D3000232091 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F8C1CE65D3000232091 /* PhotoCollectionViewCell.swift */; };
+		05178F8F1CE65D4300232091 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F8E1CE65D4300232091 /* GameViewController.swift */; };
+		05178F931CE65FEE00232091 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F921CE65FEE00232091 /* JournalViewController.swift */; };
+		05178F951CE6602500232091 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F941CE6602500232091 /* PhotoCollectionViewController.swift */; };
+		05178F971CE6608000232091 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F961CE6608000232091 /* MenuViewController.swift */; };
+		05178F991CE6609E00232091 /* TravelHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F981CE6609E00232091 /* TravelHistoryTableViewController.swift */; };
+		05178F9B1CE660AB00232091 /* TravelHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F9A1CE660AB00232091 /* TravelHistoryTableViewCell.swift */; };
+		05178F9D1CE660BE00232091 /* SearchFlightsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F9C1CE660BE00232091 /* SearchFlightsCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,16 @@
 		05178F7B1CE654F700232091 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05178F7E1CE654F700232091 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05178F801CE654F700232091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05178F881CE656D800232091 /* MajorCitiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MajorCitiesTableViewController.swift; sourceTree = "<group>"; };
+		05178F8A1CE656FA00232091 /* MajorCitiesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MajorCitiesTableViewCell.swift; sourceTree = "<group>"; };
+		05178F8C1CE65D3000232091 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		05178F8E1CE65D4300232091 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		05178F921CE65FEE00232091 /* JournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
+		05178F941CE6602500232091 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		05178F961CE6608000232091 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		05178F981CE6609E00232091 /* TravelHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelHistoryTableViewController.swift; sourceTree = "<group>"; };
+		05178F9A1CE660AB00232091 /* TravelHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		05178F9C1CE660BE00232091 /* SearchFlightsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFlightsCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +76,41 @@
 		05178F701CE654F700232091 /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
-				05178F711CE654F700232091 /* AppDelegate.swift */,
-				05178F731CE654F700232091 /* ViewController.swift */,
 				05178F751CE654F700232091 /* Main.storyboard */,
+				05178F9C1CE660BE00232091 /* SearchFlightsCollectionViewController.swift */,
+				05178F981CE6609E00232091 /* TravelHistoryTableViewController.swift */,
+				05178F9A1CE660AB00232091 /* TravelHistoryTableViewCell.swift */,
+				05178F961CE6608000232091 /* MenuViewController.swift */,
+				05178F941CE6602500232091 /* PhotoCollectionViewController.swift */,
+				05178F921CE65FEE00232091 /* JournalViewController.swift */,
+				05178F8C1CE65D3000232091 /* PhotoCollectionViewCell.swift */,
+				05178F8E1CE65D4300232091 /* GameViewController.swift */,
+				05178F8A1CE656FA00232091 /* MajorCitiesTableViewCell.swift */,
+				05178F881CE656D800232091 /* MajorCitiesTableViewController.swift */,
+				05178F861CE6550700232091 /* SupportingFiles */,
+				05178F871CE6551100232091 /* CoreData */,
+			);
+			path = FinalProject;
+			sourceTree = "<group>";
+		};
+		05178F861CE6550700232091 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				05178F731CE654F700232091 /* ViewController.swift */,
+				05178F711CE654F700232091 /* AppDelegate.swift */,
 				05178F7B1CE654F700232091 /* Assets.xcassets */,
 				05178F7D1CE654F700232091 /* LaunchScreen.storyboard */,
 				05178F801CE654F700232091 /* Info.plist */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		05178F871CE6551100232091 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
 				05178F781CE654F700232091 /* FinalProject.xcdatamodeld */,
 			);
-			path = FinalProject;
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +185,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05178F991CE6609E00232091 /* TravelHistoryTableViewController.swift in Sources */,
+				05178F9D1CE660BE00232091 /* SearchFlightsCollectionViewController.swift in Sources */,
+				05178F931CE65FEE00232091 /* JournalViewController.swift in Sources */,
+				05178F971CE6608000232091 /* MenuViewController.swift in Sources */,
+				05178F8F1CE65D4300232091 /* GameViewController.swift in Sources */,
+				05178F9B1CE660AB00232091 /* TravelHistoryTableViewCell.swift in Sources */,
+				05178F8B1CE656FA00232091 /* MajorCitiesTableViewCell.swift in Sources */,
+				05178F891CE656D800232091 /* MajorCitiesTableViewController.swift in Sources */,
+				05178F951CE6602500232091 /* PhotoCollectionViewController.swift in Sources */,
 				05178F741CE654F700232091 /* ViewController.swift in Sources */,
 				05178F721CE654F700232091 /* AppDelegate.swift in Sources */,
 				05178F7A1CE654F700232091 /* FinalProject.xcdatamodeld in Sources */,
+				05178F8D1CE65D3000232091 /* PhotoCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

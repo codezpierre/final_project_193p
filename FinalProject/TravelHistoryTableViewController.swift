@@ -7,17 +7,39 @@
 //
 
 import UIKit
+import CoreData
+
 
 class TravelHistoryTableViewController: UITableViewController {
 
+    var trips: [Trip]? {
+        didSet{
+            updateUI()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    var managedObjectContext: NSManagedObjectContext? {
+        return ((UIApplication.sharedApplication().delegate) as? AppDelegate)?.managedObjectContext
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let fetchRequest = NSFetchRequest(entityName: "Trip")
+        do {
+            if let fetchResults = try managedObjectContext!.executeFetchRequest(fetchRequest) as? [Trip] {
+                trips = fetchResults
+            }
+        } catch {
+            print(error)
+        }
+    }
+    
+    private func updateUI() {
+        tableView.reloadData() //redraws UI
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,58 +51,45 @@ class TravelHistoryTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        if trips == nil {
+            return 0
+        } else {
+            return trips!.count
+        }
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("travelHistoryCell", forIndexPath: indexPath)
+        
+        let trip = trips![indexPath.row]
+        
+        if let tripCell = cell as? TravelHistoryTableViewCell {
+            tripCell.trip = trip
+//            let imageData = trip.image
+//            tripCell.tripImageView = UIImageView(data: imageData!)
+//            tripCell.destinationLabel = trip.destination
+//            tripCell.departDateLabel = trip.departureDate
+//            tripCell.returnDateLabel = trip.returnDate
+        }
 
-        // Configure the cell...
-
+        
+//        let imageData = trip.image
+//        let destinationText = trip.destination
+//        cell.imageView?.image = UIImage(data: imageData!)
+//        cell.text
+//        cell.textLabel?.text = trip.destination
+//        //cell.imageView?.image = trip.image
+        
+      
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
+    
 
     /*
     // MARK: - Navigation

@@ -7,88 +7,120 @@
 //
 
 import UIKit
+import MobileCoreServices
+
 
 private let reuseIdentifier = "Cell"
 
-class PhotoCollectionViewController: UICollectionViewController {
+class PhotoCollectionViewController: UICollectionViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPopoverPresentationControllerDelegate, UICollectionViewDelegateFlowLayout, UIPickerViewDelegate {
+    
+    
+    
+    // global variable
+   // var photos: [UIImage]?
+    //private let sectionInsets = UIEdgeInsets(top: 20.0, left: 10.0, bottom: 20.0, right: 10.0)
+   // var totalPhotos = 0
+   // private var cellSize: CGSize? = nil
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+        self.collectionView?.delegate = self
+        self.collectionView?.backgroundColor = UIColor.whiteColor()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
-    }
-
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
     
-        // Configure the cell
+    // MARK: Private API
+    // Function calculates the size that each collection view cell should be
+//    private func calculateCellSize() {
+//        let scaleFactor = collectionView!.frame.width/2.5/tempImage!.size.width
+//        var tempSize = CGSize(width: tempImage!.size.width*scaleFactor, height: tempImage!.size.height*scaleFactor)
+//        tempSize.height += tempSize.width/3.5
+//        cellSize = tempSize
+//    }
     
-        return cell
-    }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(collectionView: UICollectionView, shouldShowMenuForItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(collectionView: UICollectionView, canPerformAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
-        return false
-    }
-
-    override func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
     
+    
+    // MARK: UIViewController Lifecycle
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
     }
-    */
-
+    
+//    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("contactCell", forIndexPath: indexPath) as! PhotoCollectionViewCell
+//        
+//        // Configure the cell
+//        var contactPhoto = UIImage()
+//        let scaleFactor = cell.frame.width/image!.size.width
+//        contactPhoto = resizeImage(contactPhoto!, scale: scaleFactor)
+//        cell.imageView?.image = contactPhoto
+//        cell.backgroundColor = UIColor.purpleColor()
+//        return cell
+//    }
+//    
+//    // Function resizes the given image to the given scale so all of our
+//    // collection view cells can have the same size
+//    private func resizeImage(image: UIImage, scale: CGFloat) -> UIImage {
+//        let newHeight = image.size.height * scale
+//        let newWidth = image.size.width * scale
+//        UIGraphicsBeginImageContext(CGSizeMake(newWidth, newHeight))
+//        image.drawInRect(CGRectMake(0, 0, newWidth, newHeight))
+//        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//        
+//        return newImage
+//    }
+//    
+//    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+//        self.collectionView?.reloadData()
+//    }
+//    
+//    
+//    
+//    // MARK: UICollectionViewDataSource
+//    
+//    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1
+//    }
+//    
+//    
+//    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of items
+//        return totalPhotos
+//    }
+//    
+//    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("photoCell, forIndexPath: indexPath)
+//        
+//        return cell
+//    }
+//    
+//    func importPhotoFromLibrary() {
+//        let picker = UIImagePickerController()
+//        picker.sourceType = .PhotoLibrary
+//        picker.mediaTypes = [kUTTypeImage as String]
+//        picker.allowsEditing = true
+//        picker.delegate = self
+//        presentViewController(picker, animated: true, completion: nil)
+//    }
+//
+//    
+//    // MARK: UICollectionViewDelegateFlowLayout
+//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+//        return cellSize!
+//    }
+//    
+//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+//        return sectionInsets
+//    }
+//    
+//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+//        return 8.0
+//    }
+//    
+//    func collectionView(collectionView: UICollectionView,
+//                        layout collectionViewLayout: UICollectionViewLayout,
+//                               minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+//        return 8.0
+//    }
 }

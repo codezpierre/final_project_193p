@@ -10,15 +10,15 @@ import UIKit
 
 class MajorCitiesTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    @IBOutlet weak var MajorCityLabel: UILabel!
+    
+    @IBOutlet weak var StateLabel: UILabel!
+    
+    private func updateUI() {
+        
+        //this is just a place holder until we get core data going
+        MajorCityLabel?.text = "Boulder"
+        StateLabel?.text = "Colorado"
     }
 
 }

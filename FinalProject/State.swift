@@ -11,7 +11,19 @@ import CoreData
 
 
 class State: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
+    
+    class func addState (stateText: String, context: NSManagedObjectContext) -> State?
+    {
+        let request = NSFetchRequest(entityName: "State")
+        request.predicate = NSPredicate(format: "stateText = %@", stateText)
+        if let state = (try? context.executeFetchRequest(request))?.first as? State {
+            return state
+        } else if let state = NSEntityDescription.insertNewObjectForEntityForName("State", inManagedObjectContext: context) as? State {
+            state.stateText = stateText
+            return state
+        }
+        return nil
+    }
+    
 
 }

@@ -31,6 +31,7 @@
 		3064119D1CF27D6A00057D7C /* Trip+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306411971CF27D6A00057D7C /* Trip+CoreDataProperties.swift */; };
 		3064119E1CF27D6A00057D7C /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306411981CF27D6A00057D7C /* Trip.swift */; };
 		306411A01CF2899100057D7C /* NewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064119F1CF2899100057D7C /* NewTripViewController.swift */; };
+		306411A21CF2B57900057D7C /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306411A11CF2B57900057D7C /* CoreDataTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		306411971CF27D6A00057D7C /* Trip+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		306411981CF27D6A00057D7C /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		3064119F1CF2899100057D7C /* NewTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTripViewController.swift; sourceTree = "<group>"; };
+		306411A11CF2B57900057D7C /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataTableViewController.swift; path = ../../../../CoreDataTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		05178F871CE6551100232091 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				306411A11CF2B57900057D7C /* CoreDataTableViewController.swift */,
 				306411931CF27D6A00057D7C /* State+CoreDataProperties.swift */,
 				306411941CF27D6A00057D7C /* State.swift */,
 				306411951CF27D6A00057D7C /* City+CoreDataProperties.swift */,
@@ -243,6 +246,7 @@
 				05178F8B1CE656FA00232091 /* MajorCitiesTableViewCell.swift in Sources */,
 				05178F891CE656D800232091 /* MajorCitiesTableViewController.swift in Sources */,
 				05178F951CE6602500232091 /* PhotoCollectionViewController.swift in Sources */,
+				306411A21CF2B57900057D7C /* CoreDataTableViewController.swift in Sources */,
 				3064119B1CF27D6A00057D7C /* City+CoreDataProperties.swift in Sources */,
 				05178F741CE654F700232091 /* ViewController.swift in Sources */,
 				3064119E1CF27D6A00057D7C /* Trip.swift in Sources */,

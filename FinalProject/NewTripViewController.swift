@@ -16,22 +16,11 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var DestinationTextfield: UITextField!
-    @IBOutlet weak var DepartDatePicker: UIDatePicker!
-    @IBOutlet weak var ReturnDatePicker: UIDatePicker!
-
+    @IBOutlet weak var departDateLabel: UILabel!
+    @IBOutlet weak var returnDateLabel: UILabel!
     
     @IBAction func cancel(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    @IBAction func Done(sender: UIBarButtonItem) {
-//        if let imageView = imageView.image {
-//            let imageData = NSData(UIImageView: imageView)
-//        }
-        
-        //let imageData = NSData(UIImageView: imageView.image)
-
-//        Trip.createTrip((DestinationTextfield?.text)!, departureDate: DepartDatePicker.date, returnDate: ReturnDatePicker.date, image: imageData)//imageView.image)
     }
     
     // MARK: Private API
@@ -46,26 +35,26 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
         set {
             imageView?.image = newValue
             // remove any existing aspect ratio constraint on the imageView
-//            if aspectRatioConstraint != nil {
-//                imageView.removeConstraint(aspectRatioConstraint!)
-//                aspectRatioConstraint = nil
-//            }
-//            // add a new aspect ratio constraint on the imageView
-//            // the imageView will be constrained to have the same aspect ratio as its image
-//            // this code should look very similar to an inspected constraint in Interface Builder
-//            if let image = newValue, let imageView = imageView {
-//                let aspectRatio = image.size.width / image.size.height
-//                aspectRatioConstraint = NSLayoutConstraint(
-//                    item: imageView,
-//                    attribute: .Width,
-//                    relatedBy: .Equal,
-//                    toItem: imageView,
-//                    attribute: .Height,
-//                    multiplier: aspectRatio,
-//                    constant: 0
-//                )
-//                imageView.addConstraint(aspectRatioConstraint!)
-//            }
+            //            if aspectRatioConstraint != nil {
+            //                imageView.removeConstraint(aspectRatioConstraint!)
+            //                aspectRatioConstraint = nil
+            //            }
+            //            // add a new aspect ratio constraint on the imageView
+            //            // the imageView will be constrained to have the same aspect ratio as its image
+            //            // this code should look very similar to an inspected constraint in Interface Builder
+            //            if let image = newValue, let imageView = imageView {
+            //                let aspectRatio = image.size.width / image.size.height
+            //                aspectRatioConstraint = NSLayoutConstraint(
+            //                    item: imageView,
+            //                    attribute: .Width,
+            //                    relatedBy: .Equal,
+            //                    toItem: imageView,
+            //                    attribute: .Height,
+            //                    multiplier: aspectRatio,
+            //                    constant: 0
+            //                )
+            //                imageView.addConstraint(aspectRatioConstraint!)
+            //            }
         }
     }
     
@@ -106,6 +95,14 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
         presentViewController(picker, animated: true, completion: nil)
     }
     
+    @IBAction func saveNewTrip(segue: UIStoryboardSegue) {
+        //FILL IN ACTION
+    }
+    
+    
+    
+    
+    
     //    // MARK: Gestures
     //    // This function handles a tap gesture on the photo. When a tap gesture
     //    // is recognized, a popover view controller is shown to prompt the user
@@ -132,31 +129,36 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
     // Function returns true if a valid entry was typed in, but returns false
     // if a valid entry was not. In any case, an appropriate alert is shown
     // to the user
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        if identifier == "Done Adding Photo" {
-            if DestinationTextfield.text! == "" {
-                let alertNoEntry = UIAlertController(title: "Destination Was Not Added", message: "Required fields are missing", preferredStyle: UIAlertControllerStyle.Alert)
-                alertNoEntry.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-                self.presentViewController(alertNoEntry, animated: true, completion: nil)
-                return false
+    //    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+    //        if identifier == "Done Adding Photo" {
+    //            if DestinationTextfield.text! == "" {
+    //                let alertNoEntry = UIAlertController(title: "Destination Was Not Added", message: "Required fields are missing", preferredStyle: UIAlertControllerStyle.Alert)
+    //                alertNoEntry.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+    //                self.presentViewController(alertNoEntry, animated: true, completion: nil)
+    //                return false
+    //            }
+    //            return true //make sure this doesnt stay, I put this here bc this function has to return a boolean (RS)
+    //        }
+    //        return true
+    //    }
+    //}
+    
+    
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destinationVC = segue.destinationViewController
+        if let pickDateVC = destinationVC as? DatePickerViewController {
+            let identifier = segue.identifier
+            if identifier == "setDepartureDate" {
+                pickDateVC.newTripViewController = self
             }
-            return true //make sure this doesnt stay, I put this here bc this function has to return a boolean (RS)
+            if identifier == "setReturnDate" {
+                pickDateVC.newTripViewController = self
+            }
         }
-        return true
     }
 }
-//@IBAction func saveNewTrip(segue: UIStoryboardSegue) {
-//
-//}
 
-/*
- // MARK: - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
- // Get the new view controller using segue.destinationViewController.
- // Pass the selected object to the new view controller.
- }
- */
-
-//}

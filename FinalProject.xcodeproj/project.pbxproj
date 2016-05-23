@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		051353121CED654A00B1DB04 /* Trip+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051353101CED654A00B1DB04 /* Trip+CoreDataProperties.swift */; };
-		051353131CED654A00B1DB04 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051353111CED654A00B1DB04 /* Trip.swift */; };
+		0513531A1CEEC15500B1DB04 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051353191CEEC15500B1DB04 /* DatePickerViewController.swift */; };
 		05178F721CE654F700232091 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F711CE654F700232091 /* AppDelegate.swift */; };
 		05178F741CE654F700232091 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F731CE654F700232091 /* ViewController.swift */; };
 		05178F771CE654F700232091 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05178F751CE654F700232091 /* Main.storyboard */; };
@@ -23,12 +22,19 @@
 		05178F951CE6602500232091 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F941CE6602500232091 /* PhotoCollectionViewController.swift */; };
 		05178F991CE6609E00232091 /* TravelHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F981CE6609E00232091 /* TravelHistoryTableViewController.swift */; };
 		05178F9B1CE660AB00232091 /* TravelHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F9A1CE660AB00232091 /* TravelHistoryTableViewCell.swift */; };
-		05E484491CEC40DC00EBF4F8 /* NewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E484481CEC40DC00EBF4F8 /* NewTripViewController.swift */; };
+		306411901CF27C6100057D7C /* StateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064118F1CF27C6100057D7C /* StateData.swift */; };
+		306411921CF27C9300057D7C /* StatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306411911CF27C9300057D7C /* StatesTableViewController.swift */; };
+		306411991CF27D6A00057D7C /* State+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306411931CF27D6A00057D7C /* State+CoreDataProperties.swift */; };
+		3064119A1CF27D6A00057D7C /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306411941CF27D6A00057D7C /* State.swift */; };
+		3064119B1CF27D6A00057D7C /* City+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306411951CF27D6A00057D7C /* City+CoreDataProperties.swift */; };
+		3064119C1CF27D6A00057D7C /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306411961CF27D6A00057D7C /* City.swift */; };
+		3064119D1CF27D6A00057D7C /* Trip+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306411971CF27D6A00057D7C /* Trip+CoreDataProperties.swift */; };
+		3064119E1CF27D6A00057D7C /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306411981CF27D6A00057D7C /* Trip.swift */; };
+		306411A01CF2899100057D7C /* NewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064119F1CF2899100057D7C /* NewTripViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		051353101CED654A00B1DB04 /* Trip+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		051353111CED654A00B1DB04 /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		051353191CEEC15500B1DB04 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		05178F6E1CE654F700232091 /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05178F711CE654F700232091 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05178F731CE654F700232091 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,7 +51,15 @@
 		05178F941CE6602500232091 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		05178F981CE6609E00232091 /* TravelHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelHistoryTableViewController.swift; sourceTree = "<group>"; };
 		05178F9A1CE660AB00232091 /* TravelHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelHistoryTableViewCell.swift; sourceTree = "<group>"; };
-		05E484481CEC40DC00EBF4F8 /* NewTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewTripViewController.swift; path = ../NewTripViewController.swift; sourceTree = "<group>"; };
+		3064118F1CF27C6100057D7C /* StateData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateData.swift; sourceTree = "<group>"; };
+		306411911CF27C9300057D7C /* StatesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatesTableViewController.swift; sourceTree = "<group>"; };
+		306411931CF27D6A00057D7C /* State+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "State+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		306411941CF27D6A00057D7C /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		306411951CF27D6A00057D7C /* City+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "City+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		306411961CF27D6A00057D7C /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		306411971CF27D6A00057D7C /* Trip+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		306411981CF27D6A00057D7C /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		3064119F1CF2899100057D7C /* NewTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTripViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +119,14 @@
 		05178F871CE6551100232091 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				051353101CED654A00B1DB04 /* Trip+CoreDataProperties.swift */,
-				051353111CED654A00B1DB04 /* Trip.swift */,
+				306411931CF27D6A00057D7C /* State+CoreDataProperties.swift */,
+				306411941CF27D6A00057D7C /* State.swift */,
+				306411951CF27D6A00057D7C /* City+CoreDataProperties.swift */,
+				306411961CF27D6A00057D7C /* City.swift */,
+				306411971CF27D6A00057D7C /* Trip+CoreDataProperties.swift */,
+				306411981CF27D6A00057D7C /* Trip.swift */,
 				05178F781CE654F700232091 /* FinalProject.xcdatamodeld */,
+				3064118F1CF27C6100057D7C /* StateData.swift */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -115,7 +134,8 @@
 		05E4843F1CEBFD0600EBF4F8 /* Travel */ = {
 			isa = PBXGroup;
 			children = (
-				05E484481CEC40DC00EBF4F8 /* NewTripViewController.swift */,
+				051353191CEEC15500B1DB04 /* DatePickerViewController.swift */,
+				3064119F1CF2899100057D7C /* NewTripViewController.swift */,
 				05178F981CE6609E00232091 /* TravelHistoryTableViewController.swift */,
 				05178F9A1CE660AB00232091 /* TravelHistoryTableViewCell.swift */,
 			);
@@ -134,6 +154,7 @@
 		05E484411CEBFD1F00EBF4F8 /* MajorCities */ = {
 			isa = PBXGroup;
 			children = (
+				306411911CF27C9300057D7C /* StatesTableViewController.swift */,
 				05178F8A1CE656FA00232091 /* MajorCitiesTableViewCell.swift */,
 				05178F881CE656D800232091 /* MajorCitiesTableViewController.swift */,
 			);
@@ -213,18 +234,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				05178F991CE6609E00232091 /* TravelHistoryTableViewController.swift in Sources */,
-				05E484491CEC40DC00EBF4F8 /* NewTripViewController.swift in Sources */,
 				05178F931CE65FEE00232091 /* JournalViewController.swift in Sources */,
 				05178F8F1CE65D4300232091 /* GameViewController.swift in Sources */,
+				306411A01CF2899100057D7C /* NewTripViewController.swift in Sources */,
+				306411921CF27C9300057D7C /* StatesTableViewController.swift in Sources */,
+				306411991CF27D6A00057D7C /* State+CoreDataProperties.swift in Sources */,
 				05178F9B1CE660AB00232091 /* TravelHistoryTableViewCell.swift in Sources */,
 				05178F8B1CE656FA00232091 /* MajorCitiesTableViewCell.swift in Sources */,
 				05178F891CE656D800232091 /* MajorCitiesTableViewController.swift in Sources */,
 				05178F951CE6602500232091 /* PhotoCollectionViewController.swift in Sources */,
-				051353121CED654A00B1DB04 /* Trip+CoreDataProperties.swift in Sources */,
+				3064119B1CF27D6A00057D7C /* City+CoreDataProperties.swift in Sources */,
 				05178F741CE654F700232091 /* ViewController.swift in Sources */,
+				3064119E1CF27D6A00057D7C /* Trip.swift in Sources */,
+				306411901CF27C6100057D7C /* StateData.swift in Sources */,
 				05178F721CE654F700232091 /* AppDelegate.swift in Sources */,
+				3064119A1CF27D6A00057D7C /* State.swift in Sources */,
+				0513531A1CEEC15500B1DB04 /* DatePickerViewController.swift in Sources */,
 				05178F7A1CE654F700232091 /* FinalProject.xcdatamodeld in Sources */,
-				051353131CED654A00B1DB04 /* Trip.swift in Sources */,
+				3064119C1CF27D6A00057D7C /* City.swift in Sources */,
+				3064119D1CF27D6A00057D7C /* Trip+CoreDataProperties.swift in Sources */,
 				05178F8D1CE65D3000232091 /* PhotoCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

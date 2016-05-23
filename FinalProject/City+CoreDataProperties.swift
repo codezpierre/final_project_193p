@@ -1,5 +1,5 @@
 //
-//  Trip+CoreDataProperties.swift
+//  City+CoreDataProperties.swift
 //  FinalProject
 //
 //  Created by robbes on 5/22/16.
@@ -12,11 +12,12 @@
 import Foundation
 import CoreData
 
-extension Trip {
+extension City {
 
-    @NSManaged var departureDate: NSDate?
-    @NSManaged var image: NSData?
-    @NSManaged var returnDate: NSDate?
-    @NSManaged var destination: City?
+    @NSManaged var isCapital: NSNumber?
+    @NSManaged var visited: NSNumber?
+    @NSManaged var cityText: String?
+    @NSManaged var state: State?
+    @NSManaged var trips: NSSet?
 
 }

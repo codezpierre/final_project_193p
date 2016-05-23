@@ -31,25 +31,12 @@ class TravelHistoryTableViewCell: UITableViewCell {
         // load new information from our tweet (if any)
         if let trip = self.trip
         {
-//            if let imageData = trip.image {
-//                tripImageView?.image = UIImageView(data: imageData!)
-//            }
+            if let imageData = trip.image {
+                tripImageView?.image = UIImage(data: imageData)
+            }
             
-            destinationLabel?.text = trip.destination
-            returnDateLabel?.text = String(trip.returnDate)
-//            
-//            if let imageData = trip.image {
-//                dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) { [ weak weakSelf = self ] in
-//                    if let imageData = NSData(contentsOfURL: imageUrl) {
-//                        if imageUrl == weakSelf?.tweet!.user.profileImageURL {
-//                            dispatch_async(dispatch_get_main_queue()) {
-//                                weakSelf?.tweetProfileImageView?.image = UIImage(data: imageData)
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//            
+            destinationLabel?.text = trip.destination?.cityText
+            returnDateLabel?.text = String(trip.returnDate) 
             
             
             let formatter_depart = NSDateFormatter()

@@ -63,7 +63,6 @@ class TravelHistoryTableViewController: UITableViewController {
         }
     }
     
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("travelHistoryCell", forIndexPath: indexPath)
         
@@ -90,6 +89,11 @@ class TravelHistoryTableViewController: UITableViewController {
         return cell
     }
     
+    //unwinding from NewTripPickerVC
+    @IBAction func saveNewTrip(unwindsegue: UIStoryboardSegue) {
+        //empty
+    }
+
     
    /*
     // MARK: - Navigation

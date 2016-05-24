@@ -9,21 +9,43 @@
 import UIKit
 
 class DatePickerViewController: UIViewController {
-
-    var newTripViewController: UIViewController? = nil
-
-    @IBAction func doneButton(sender: UIBarButtonItem) {
-        if newTripViewController != nil {
-          //  newTripViewController.departDateLabel = datePicker
-        }
-    }
-
+    
+    var newTripViewController: NewTripViewController? = nil
+    var isDeparture = true
+    //var departureDate
+    
+    
+    //    @IBAction func doneButton(sender: UIBarButtonItem) {
+    //        if newTripViewController != nil {
+    //            if isDeparture == true {
+    //                newTripViewController!.departDateLabel.text = "\(datePicker.date)"
+    //            } else {
+    //                newTripViewController!.returnDateLabel.text = "\(datePicker.date)"
+    //            }
+    //        }
+    //       // dismissViewControllerAnimated(true, completion: nil)
+    //    }
+    
+    
     @IBOutlet weak var datePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let id =  segue.identifier
+        if id == "unwindFromDateDone" {
+            if newTripViewController != nil {
+                if isDeparture == true {
+                    newTripViewController!.departDateLabel.text = "\(datePicker.date)"
+                } else {
+                    newTripViewController!.returnDateLabel.text = "\(datePicker.date)"
+                }
+            }
+        }
+    }
 }
+
+

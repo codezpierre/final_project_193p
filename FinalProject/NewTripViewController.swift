@@ -8,6 +8,7 @@
 
 import UIKit
 import MobileCoreServices
+import CoreData
 
 
 class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPopoverPresentationControllerDelegate{
@@ -95,10 +96,12 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
         presentViewController(picker, animated: true, completion: nil)
     }
     
-    @IBAction func saveNewTrip(segue: UIStoryboardSegue) {
-        //FILL IN ACTION
-    }
     
+    
+    //unwinding from DatePickerVC
+    @IBAction func saveDate(segue: UIStoryboardSegue) {
+        //empty
+    }
     
     
     
@@ -150,15 +153,27 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destinationVC = segue.destinationViewController
+        let identifier = segue.identifier
         if let pickDateVC = destinationVC as? DatePickerViewController {
-            let identifier = segue.identifier
             if identifier == "setDepartureDate" {
                 pickDateVC.newTripViewController = self
+               // pickDateVC.departureDate = NSDate;
+                pickDateVC.isDeparture = true
+                
             }
             if identifier == "setReturnDate" {
                 pickDateVC.newTripViewController = self
+                pickDateVC.isDeparture = false
             }
         }
+//        if let unwindToVC == destinationVC as? TravelHistoryTableViewController {
+//                let dateFormatter = NSDateFormatter()
+//                dateFormatter.dateFormat("yyyy-MM-dd hh:mm:ssZZZZ")
+//                let date = dateFormatter.dateFromString(departDateLabel)
+//                Trip.createTrip(DestinationTextfield.text!, departureDate: date, returnDate: <#T##NSDate#>, image: <#T##NSData#>)
+//            }
+//        }
     }
 }
+
 

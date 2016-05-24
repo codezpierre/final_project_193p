@@ -17,5 +17,10 @@ class DoodleView: UIView {
         // Drawing code
     }
     */
+//    
+//    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+//        swipe = false
+//        if let touch
+//    }
 
 }

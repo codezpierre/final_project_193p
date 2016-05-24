@@ -21,12 +21,12 @@ class DoodleViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var doodleView: DoodleView!
-        //{
+//    @IBOutlet weak var doodleView: DoodleView!
+//        {
 //        didSet {
 //            doodleView.addGestureRecognizer(UIPanGestureRecognizer(target: doodleView, action: #selector(DoodleView.doodle(_:))))
 //        }
-    //}
+//    }
 
     /*
     // MARK: - Navigation

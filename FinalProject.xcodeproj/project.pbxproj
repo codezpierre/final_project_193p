@@ -32,6 +32,8 @@
 		3064119E1CF27D6A00057D7C /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306411981CF27D6A00057D7C /* Trip.swift */; };
 		306411A01CF2899100057D7C /* NewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064119F1CF2899100057D7C /* NewTripViewController.swift */; };
 		306411A41CF3BD6E00057D7C /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306411A31CF3BD6E00057D7C /* CoreDataTableViewController.swift */; };
+		306411A81CF3F18E00057D7C /* DoodleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306411A71CF3F18E00057D7C /* DoodleViewController.swift */; };
+		306411AA1CF3F1BD00057D7C /* DoodleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306411A91CF3F1BD00057D7C /* DoodleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		306411981CF27D6A00057D7C /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		3064119F1CF2899100057D7C /* NewTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTripViewController.swift; sourceTree = "<group>"; };
 		306411A31CF3BD6E00057D7C /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewController.swift; sourceTree = "<group>"; };
+		306411A71CF3F18E00057D7C /* DoodleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoodleViewController.swift; sourceTree = "<group>"; };
+		306411A91CF3F1BD00057D7C /* DoodleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoodleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 				05E4843F1CEBFD0600EBF4F8 /* Travel */,
 				05E484401CEBFD1000EBF4F8 /* Photos */,
 				05178F921CE65FEE00232091 /* JournalViewController.swift */,
+				306411A71CF3F18E00057D7C /* DoodleViewController.swift */,
+				306411A91CF3F1BD00057D7C /* DoodleView.swift */,
 				05178F8E1CE65D4300232091 /* GameViewController.swift */,
 				05E484411CEBFD1F00EBF4F8 /* MajorCities */,
 				05178F861CE6550700232091 /* SupportingFiles */,
@@ -249,6 +255,7 @@
 				306411A41CF3BD6E00057D7C /* CoreDataTableViewController.swift in Sources */,
 				3064119B1CF27D6A00057D7C /* City+CoreDataProperties.swift in Sources */,
 				05178F741CE654F700232091 /* ViewController.swift in Sources */,
+				306411AA1CF3F1BD00057D7C /* DoodleView.swift in Sources */,
 				3064119E1CF27D6A00057D7C /* Trip.swift in Sources */,
 				306411901CF27C6100057D7C /* StateData.swift in Sources */,
 				05178F721CE654F700232091 /* AppDelegate.swift in Sources */,
@@ -256,6 +263,7 @@
 				0513531A1CEEC15500B1DB04 /* DatePickerViewController.swift in Sources */,
 				05178F7A1CE654F700232091 /* FinalProject.xcdatamodeld in Sources */,
 				3064119C1CF27D6A00057D7C /* City.swift in Sources */,
+				306411A81CF3F18E00057D7C /* DoodleViewController.swift in Sources */,
 				3064119D1CF27D6A00057D7C /* Trip+CoreDataProperties.swift in Sources */,
 				05178F8D1CE65D3000232091 /* PhotoCollectionViewCell.swift in Sources */,
 			);

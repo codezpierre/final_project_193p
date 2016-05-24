@@ -40,11 +40,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wYB-4a-5o0"/>
+                    <navigationItem key="navigationItem" id="wYB-4a-5o0">
+                        <barButtonItem key="leftBarButtonItem" title="Add doodle" id="sJK-f8-Rp7">
+                            <connections>
+                                <action selector="showDoodleVC:" destination="Qo8-h9-N2n" id="4GP-yn-msc"/>
+                                <segue destination="hiJ-as-Ijk" kind="show" identifier="showDoodleVC" id="Bsu-2X-tAa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vxz-hj-N9u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2077" y="1911"/>
+        </scene>
+        <!--Doodle View Controller-->
+        <scene sceneID="mi1-oz-2Mn">
+            <objects>
+                <viewController id="hiJ-as-Ijk" customClass="DoodleViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ax3-2K-41j"/>
+                        <viewControllerLayoutGuide type="bottom" id="GlA-Et-wwz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oT7-3k-bJG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYG-en-P4e" customClass="DoodleView" customModule="FinalProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SYG-en-P4e" firstAttribute="leading" secondItem="oT7-3k-bJG" secondAttribute="leading" id="251-M9-2qM"/>
+                            <constraint firstItem="SYG-en-P4e" firstAttribute="top" secondItem="ax3-2K-41j" secondAttribute="bottom" id="KVI-de-OZp"/>
+                            <constraint firstAttribute="trailing" secondItem="SYG-en-P4e" secondAttribute="trailing" id="ONJ-Gt-KFk"/>
+                            <constraint firstAttribute="bottom" secondItem="SYG-en-P4e" secondAttribute="bottom" id="cD2-aV-ULn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="doodleView" destination="SYG-en-P4e" id="795-wC-BdZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jcn-za-uiR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2819" y="1911"/>
         </scene>
         <!-- Learning Game-->
         <scene sceneID="nC3-Cb-m9e">

@@ -1,14 +1,14 @@
 //
-//  JournalViewController.swift
+//  DoodleViewController.swift
 //  FinalProject
 //
-//  Created by Sarah Radzihovsky on 5/13/16.
+//  Created by robbes on 5/23/16.
 //  Copyright © 2016 Sarah Radzihovsky. All rights reserved.
 //
 
 import UIKit
 
-class JournalViewController: UIViewController {
+class DoodleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +21,12 @@ class JournalViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func showDoodleVC(sender: UIBarButtonItem) {
-    }
+    @IBOutlet weak var doodleView: DoodleView!
+        //{
+//        didSet {
+//            doodleView.addGestureRecognizer(UIPanGestureRecognizer(target: doodleView, action: #selector(DoodleView.doodle(_:))))
+//        }
+    //}
 
     /*
     // MARK: - Navigation

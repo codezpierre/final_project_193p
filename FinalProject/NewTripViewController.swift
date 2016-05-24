@@ -24,6 +24,11 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    //variables set in the DatePickerVC
+    var savedDepartDate: NSDate?
+    var savedReturnDate: NSDate?
+
+    
     // MARK: Private API
     private var aspectRatioConstraint: NSLayoutConstraint?
     
@@ -76,6 +81,15 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
         DestinationTextfield.becomeFirstResponder()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        if savedDepartDate != nil {
+            departDateLabel.text = "\(savedDepartDate!)"
+        }
+        if savedReturnDate != nil {
+            returnDateLabel.text = "\(savedReturnDate!)" // ?? "Return Date")"
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -96,15 +110,11 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
         presentViewController(picker, animated: true, completion: nil)
     }
     
-    
-    
     //unwinding from DatePickerVC
     @IBAction func saveDate(segue: UIStoryboardSegue) {
         //empty
     }
-    
-    
-    
+ 
     
     //    // MARK: Gestures
     //    // This function handles a tap gesture on the photo. When a tap gesture
@@ -166,13 +176,14 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
                 pickDateVC.isDeparture = false
             }
         }
-//        if let unwindToVC == destinationVC as? TravelHistoryTableViewController {
+        if let unwindToVC = destinationVC as? TravelHistoryTableViewController {
 //                let dateFormatter = NSDateFormatter()
 //                dateFormatter.dateFormat("yyyy-MM-dd hh:mm:ssZZZZ")
 //                let date = dateFormatter.dateFromString(departDateLabel)
-//                Trip.createTrip(DestinationTextfield.text!, departureDate: date, returnDate: <#T##NSDate#>, image: <#T##NSData#>)
-//            }
-//        }
+
+                Trip.createTrip(DestinationTextfield.text!, departureDate: savedDepartDate!, returnDate: savedReturnDate!, image: UIImagePNGRepresentation(image!)!)
+            
+        }
     }
 }
 

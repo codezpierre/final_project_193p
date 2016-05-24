@@ -171,25 +171,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="148" height="148"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W91-Z3-4Og">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W91-Z3-4Og">
                                             <rect key="frame" x="10" y="10" width="128" height="128"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="122" id="dqx-06-s9G"/>
-                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <constraints>
-                                    <constraint firstAttribute="bottomMargin" secondItem="W91-Z3-4Og" secondAttribute="bottom" constant="-2" id="anP-rO-4PA"/>
-                                    <constraint firstItem="W91-Z3-4Og" firstAttribute="leading" secondItem="1TS-gl-dGF" secondAttribute="leadingMargin" constant="2" id="git-pW-KQK"/>
-                                    <constraint firstItem="W91-Z3-4Og" firstAttribute="top" secondItem="1TS-gl-dGF" secondAttribute="topMargin" id="kMA-8N-z1r"/>
-                                    <constraint firstItem="W91-Z3-4Og" firstAttribute="centerX" secondItem="1TS-gl-dGF" secondAttribute="centerX" id="qJu-E5-Xsy"/>
-                                </constraints>
                                 <size key="customSize" width="148" height="148"/>
                                 <connections>
                                     <outlet property="image" destination="W91-Z3-4Og" id="OVg-AJ-4c3"/>
-                                    <outlet property="photoImage" destination="W91-Z3-4Og" id="M8X-qF-yoo"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -305,10 +295,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="50K-3P-sVK">
-                                <rect key="frame" x="20" y="90" width="168" height="82"/>
+                                <rect key="frame" x="20" y="90" width="176" height="82"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Destination*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UHL-NO-lUU">
-                                        <rect key="frame" x="0.0" y="0.0" width="168" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="176" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="235" id="FnB-Mv-geg"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="235" id="bfE-MM-jqN"/>
@@ -323,19 +313,19 @@
                                         </variation>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="255" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="nlg-QJ-9ix">
-                                        <rect key="frame" x="0.0" y="30" width="168" height="52"/>
+                                        <rect key="frame" x="0.0" y="30" width="176" height="52"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tsv-nR-J8i">
-                                                <rect key="frame" x="0.0" y="0.0" width="167" height="26"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tsv-nR-J8i">
+                                                <rect key="frame" x="0.0" y="0.0" width="174" height="26"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Depart Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9h6-gY-uiJ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="89" height="26"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Depart Date*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9h6-gY-uiJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="26"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S42-iu-IrK">
-                                                        <rect key="frame" x="99" y="0.0" width="68" height="26"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S42-iu-IrK">
+                                                        <rect key="frame" x="106" y="0.0" width="68" height="26"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                                         <state key="normal" title="Choose Date"/>
                                                         <connections>
@@ -345,16 +335,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4sc-R6-HpW">
-                                                <rect key="frame" x="0.0" y="26" width="168" height="26"/>
+                                                <rect key="frame" x="0.0" y="26" width="176" height="26"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Return Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNI-rT-99T">
-                                                        <rect key="frame" x="0.0" y="0.0" width="87" height="26"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Return Date*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNI-rT-99T">
+                                                        <rect key="frame" x="0.0" y="0.0" width="95" height="26"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uue-wE-7MY">
-                                                        <rect key="frame" x="97" y="0.0" width="71" height="26"/>
+                                                        <rect key="frame" x="105" y="0.0" width="71" height="26"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                         <state key="normal" title=" Choose Date"/>
                                                         <connections>

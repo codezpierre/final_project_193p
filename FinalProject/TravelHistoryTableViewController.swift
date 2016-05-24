@@ -91,7 +91,18 @@ class TravelHistoryTableViewController: UITableViewController {
     
     //unwinding from NewTripPickerVC
     @IBAction func saveNewTrip(unwindsegue: UIStoryboardSegue) {
-        //empty
+       // performSegueWithIdentifier("unwindFromNewTripDone", sender: NewTripViewController())
+//        let fetchRequest = NSFetchRequest(entityName: "Trip")
+//        do {
+//            if let fetchResults = try managedObjectContext!.executeFetchRequest(fetchRequest) as? [Trip] {
+//                trips = fetchResults
+//            }
+//        } catch {
+//            print(error)
+//        }
+        //updateUI()
+        
+        
     }
 
     

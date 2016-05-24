@@ -25,8 +25,8 @@ class TravelHistoryTableViewCell: UITableViewCell {
         // reset any existing tweet information (clear out outlets)
         destinationLabel?.text = nil
         tripImageView?.image = nil
-        departDateLabel?.text = nil
-        returnDateLabel?.text = nil
+        departDateLabel?.text = "Depart Date"
+        returnDateLabel?.text = "Return Date"
         
         // load new information from our tweet (if any)
         if let trip = self.trip
@@ -35,8 +35,9 @@ class TravelHistoryTableViewCell: UITableViewCell {
                 tripImageView?.image = UIImage(data: imageData)
             }
             
-            destinationLabel?.text = trip.destination?.cityText
-            returnDateLabel?.text = String(trip.returnDate) 
+            destinationLabel?.text = trip.destination?.cityText //?? ""
+            
+            returnDateLabel?.text = String(trip.returnDate) ?? "Return Date"
             
             
             let formatter_depart = NSDateFormatter()
@@ -45,7 +46,7 @@ class TravelHistoryTableViewCell: UITableViewCell {
             } else {
                 formatter_depart.timeStyle = NSDateFormatterStyle.ShortStyle
             }
-            departDateLabel?.text = formatter_depart.stringFromDate(trip.departureDate!)
+            departDateLabel?.text = formatter_depart.stringFromDate(trip.departureDate!) ?? "Depart Date"
             
             let formatter_return = NSDateFormatter()
             if NSDate().timeIntervalSinceDate(trip.returnDate!) > 24*60*60 {
@@ -53,7 +54,7 @@ class TravelHistoryTableViewCell: UITableViewCell {
             } else {
                 formatter_return.timeStyle = NSDateFormatterStyle.ShortStyle
             }
-            returnDateLabel?.text = formatter_return.stringFromDate(trip.returnDate!)
+            returnDateLabel?.text = formatter_return.stringFromDate(trip.returnDate!) ?? "Return Date"
         }
     }
 }

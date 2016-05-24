@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DoodleViewController: UIViewController {
+class DoodleViewController: UIViewController  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,7 @@ class DoodleViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
 //    @IBOutlet weak var doodleView: DoodleView!
 //        {

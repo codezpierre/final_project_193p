@@ -34,15 +34,16 @@ class DatePickerViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
+        let destinationVC = segue.destinationViewController
         let id =  segue.identifier
         if id == "unwindFromDateDone" {
-            if newTripViewController != nil {
-                if isDeparture == true {
-                    newTripViewController!.departDateLabel.text = "\(datePicker.date)"
+            if let newTripVC = destinationVC as? NewTripViewController {
+                if isDeparture{
+                    newTripVC.savedDepartDate = datePicker.date
                 } else {
-                    newTripViewController!.returnDateLabel.text = "\(datePicker.date)"
+                    newTripVC.savedReturnDate = datePicker.date
                 }
+                
             }
         }
     }

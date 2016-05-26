@@ -13,7 +13,8 @@ class DoodleViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        doodleView.userInteractionEnabled = true
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,10 +23,10 @@ class DoodleViewController: UIViewController  {
     }
 
     
-//    @IBOutlet weak var doodleView: DoodleView!
+    @IBOutlet weak var doodleView: DoodleView!
 //        {
 //        didSet {
-//            doodleView.addGestureRecognizer(UIPanGestureRecognizer(target: doodleView, action: #selector(DoodleView.doodle(_:))))
+//            doodleView.addGestureRecognizer(UIPanGestureRecognizer(target: doodleView, action: #selector(DoodleView.pan(_:))))
 //        }
 //    }
 

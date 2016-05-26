@@ -18,7 +18,7 @@ class DoodleView: UIView {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //set of touches
-        var path = UIBezierPath()
+        let path = UIBezierPath()
         self.paths.append(path)
         if let newPoint = touches.first?.locationInView(self) {
             self.paths.last?.moveToPoint(newPoint)
@@ -28,6 +28,13 @@ class DoodleView: UIView {
 //    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
 //        if let newPoint = touches.first?.locationInView(self) {
 //            paths.last?.addLineToPoint(touches.first?.locationInView(self))
+//        }
+//    }
+    
+//    func pan(recongnizer: UIGestureRecognizer) {
+//        switch recongnizer.state {
+//        case .Changed, .Ended:
+//            
 //        }
 //    }
     

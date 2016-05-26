@@ -12,7 +12,6 @@ class DoodleViewController: UIViewController  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         doodleView.userInteractionEnabled = true
 
     }
@@ -24,11 +23,17 @@ class DoodleViewController: UIViewController  {
 
     
     @IBOutlet weak var doodleView: DoodleView!
-//        {
-//        didSet {
-//            doodleView.addGestureRecognizer(UIPanGestureRecognizer(target: doodleView, action: #selector(DoodleView.pan(_:))))
-//        }
-//    }
+    
+    
+    @IBAction func undo(sender: AnyObject) {
+    }
+
+    @IBAction func clear(sender: AnyObject) {
+    }
+    
+    
+    @IBAction func save(sender: AnyObject) {
+    }
 
     /*
     // MARK: - Navigation

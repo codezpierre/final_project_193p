@@ -30,8 +30,8 @@ class StateMapViewController: UIViewController {
     
     private func updateUI() {
     let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(self.city!, completionHandler: {(placemark: [CLPlacemark]?, error: NSError?) -> Void in
-            self.centerMapOnLocation(placemark![0].location!);
+        geocoder.geocodeAddressString(self.city!, completionHandler: { [weak weakSelf = self] (placemark: [CLPlacemark]?, error: NSError?) -> Void in
+            weakSelf?.centerMapOnLocation(placemark![0].location!)
         })
     }
     

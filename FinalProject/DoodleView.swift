@@ -10,8 +10,12 @@ import UIKit
 
 class DoodleView: UIView {
     
-    var paths = [UIBezierPath()] // structure to hold paths
+    var paths = [UIBezierPath]() // structure to hold paths
     var color = UIColor.blackColor()
+    
+    var colors = [UIColor]()
+    
+    var stroke = [Double]()
     
     //Hey Robbe! What's happening here is that apparently a very doable way to do this is to have an array of UIBezierPaths which you collect everytime the finger is lifted and the path is done. You actually add the path first to the array when the user first touches the screen and then the path is built upon as the users touch moves to a new location. I think if we want a very basic model with no control of linewidth or color this just needs a few more lines. I'm getting a really strange bung in the touchesMoved method which is why it's commented out rn
 
@@ -25,11 +29,12 @@ class DoodleView: UIView {
         }//CGPoint
     }
     
-//    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//        if let newPoint = touches.first?.locationInView(self) {
-//            paths.last?.addLineToPoint(touches.first?.locationInView(self))
-//        }
-//    }
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if let newPoint = touches.first?.locationInView(self) { //this gives you a CGPoint
+            paths.last?.addLineToPoint(newPoint)
+            setNeedsDisplay()
+        }
+    }
     
 //    func pan(recongnizer: UIGestureRecognizer) {
 //        switch recongnizer.state {
@@ -40,6 +45,7 @@ class DoodleView: UIView {
     
     override func drawRect(rect: CGRect) {
         for path in paths{
+            color.setStroke()
             path.stroke()
         }
     }

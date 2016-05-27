@@ -21,7 +21,6 @@ class DoodleView: UIView {
     
     var currentPathWidth: CGFloat = 1.0
     
-
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //set of touches
@@ -39,7 +38,6 @@ class DoodleView: UIView {
         if let newPoint = touches.first?.locationInView(self) { //this gives you a CGPoint
             paths.last?.addLineToPoint(newPoint)
             setNeedsDisplay()
-            //colors.append(currentPathColor)
             
         }
     }
@@ -55,6 +53,7 @@ class DoodleView: UIView {
         if !paths.isEmpty {
             paths.removeLast()
             colors.removeLast()
+            lineWidths.removeLast()
             setNeedsDisplay()
         }
     }
@@ -63,6 +62,7 @@ class DoodleView: UIView {
         if !paths.isEmpty {
             paths.removeAll()
             colors.removeAll()
+            lineWidths.removeAll()
             setNeedsDisplay()
         }
     }

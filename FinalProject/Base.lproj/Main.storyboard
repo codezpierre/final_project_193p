@@ -41,7 +41,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="wYB-4a-5o0">
-                        <barButtonItem key="leftBarButtonItem" title="Add doodle" id="sJK-f8-Rp7">
+                        <barButtonItem key="leftBarButtonItem" image="doodleIcon" id="sJK-f8-Rp7">
                             <connections>
                                 <action selector="showDoodleVC:" destination="Qo8-h9-N2n" id="4GP-yn-msc"/>
                                 <segue destination="hiJ-as-Ijk" kind="show" identifier="showDoodleVC" id="Bsu-2X-tAa"/>
@@ -71,19 +71,31 @@
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xg6-qg-Yzh">
                                         <rect key="frame" x="0.0" y="442" width="600" height="44"/>
                                         <items>
-                                            <barButtonItem title="undo" id="ngb-yL-fCf">
+                                            <barButtonItem image="undoIcon" style="done" id="ngb-yL-fCf">
                                                 <connections>
                                                     <action selector="undo:" destination="hiJ-as-Ijk" id="BYw-X3-RSM"/>
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="tdr-zp-qTO"/>
-                                            <barButtonItem title="clear" id="hDb-fF-37a">
+                                            <barButtonItem image="palletteIcon" id="LMa-QV-sLA">
+                                                <connections>
+                                                    <action selector="changeColor:" destination="hiJ-as-Ijk" id="Zlg-kf-ac0"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="QWB-gG-DRa"/>
+                                            <barButtonItem image="thicknessIcon" id="WuZ-D5-hND">
+                                                <connections>
+                                                    <action selector="changeThickness:" destination="hiJ-as-Ijk" id="6nN-LU-4rZ"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="7Rj-OX-Lgt"/>
+                                            <barButtonItem title="clear" systemItem="trash" id="hDb-fF-37a">
                                                 <connections>
                                                     <action selector="clear:" destination="hiJ-as-Ijk" id="FzZ-ff-WdR"/>
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="OPw-8f-9cU"/>
-                                            <barButtonItem title="save" id="kMv-N9-Dig">
+                                            <barButtonItem image="saveButton" id="kMv-N9-Dig">
                                                 <connections>
                                                     <action selector="save:" destination="hiJ-as-Ijk" id="ufS-gb-dw2"/>
                                                 </connections>
@@ -532,7 +544,7 @@
         <scene sceneID="eNI-9I-HIf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uqS-Gy-UnO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Flight History" id="tra-1O-EC8"/>
+                    <tabBarItem key="tabBarItem" title="Flight History" image="flightHistoryIcon" id="tra-1O-EC8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WYE-Wd-kej">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -551,7 +563,7 @@
         <scene sceneID="40t-qD-IH1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jtO-TF-j0U" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Play" id="D0o-HL-Wtv"/>
+                    <tabBarItem key="tabBarItem" title="Play" image="playIcon" id="D0o-HL-Wtv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PuX-dP-Mz1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -570,7 +582,7 @@
         <scene sceneID="0tc-Wf-dIp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CXG-9p-h6m" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="States" id="N4p-K9-K3K"/>
+                    <tabBarItem key="tabBarItem" title="States" image="stateIcon" id="N4p-K9-K3K"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9L1-ZT-ukB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -589,7 +601,7 @@
         <scene sceneID="fSA-Or-gFF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rwo-KV-yHk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Reminsce" id="HcX-AQ-a2b"/>
+                    <tabBarItem key="tabBarItem" title="Reminsce" image="reminisceIcon" id="HcX-AQ-a2b"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jGz-fD-lck">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -608,7 +620,7 @@
         <scene sceneID="84K-8F-amS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wld-bT-KhN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Journal" id="i4s-Wu-B7P"/>
+                    <tabBarItem key="tabBarItem" title="Journal" image="JournalIcon" id="i4s-Wu-B7P"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zCp-2s-EoT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -625,7 +637,17 @@
         </scene>
     </scenes>
     <resources>
+        <image name="JournalIcon" width="32" height="32"/>
+        <image name="doodleIcon" width="32" height="32"/>
+        <image name="flightHistoryIcon" width="32" height="31"/>
+        <image name="palletteIcon" width="32" height="32"/>
         <image name="photoNotAvailable" width="1000" height="900"/>
+        <image name="playIcon" width="32" height="32"/>
+        <image name="reminisceIcon" width="32" height="32"/>
+        <image name="saveButton" width="32" height="32"/>
+        <image name="stateIcon" width="32" height="32"/>
+        <image name="thicknessIcon" width="32" height="32"/>
+        <image name="undoIcon" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="TDI-iO-QbC"/>

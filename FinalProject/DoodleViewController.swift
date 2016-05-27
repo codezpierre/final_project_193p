@@ -25,16 +25,39 @@ class DoodleViewController: UIViewController  {
     @IBOutlet weak var doodleView: DoodleView!
     
     
-    @IBAction func undo(sender: AnyObject) {
+    @IBAction func undo(sender: UIBarButtonItem) {
+        doodleView.undoDoodle()
     }
 
-    @IBAction func clear(sender: AnyObject) {
+    @IBAction func clear(sender: UIBarButtonItem) {
+        doodleView.clear()
     }
     
     
-    @IBAction func save(sender: AnyObject) {
+    @IBAction func save(sender: UIBarButtonItem) {
     }
 
+    @IBAction func changeColor(sender: UIBarButtonItem) {
+        let title = "Color pallette"
+        //blue button
+        let actionSheetController = UIAlertController(title: title, message: nil, preferredStyle: .ActionSheet)
+        let blue = UIAlertAction(title: "Blue", style: .Default, handler: { [weak weakSelf = self] (UIAlertAction) -> Void in
+            weakSelf!.doodleView.changeColor(UIColor.blueColor())
+        })
+        actionSheetController.addAction(blue)
+        
+        let dissmissView = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (UIAlertAction)-> Void in
+          actionSheetController.dismissViewControllerAnimated(true, completion: nil)
+        })
+        actionSheetController.addAction(dissmissView)
+        
+        self.presentViewController(actionSheetController, animated: true, completion: nil)
+    }
+    
+    @IBAction func changeThickness(sender: UIBarButtonItem) {
+        doodleView.setLineWidth()
+    }
+    
     /*
     // MARK: - Navigation
 

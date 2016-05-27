@@ -36,12 +36,27 @@ class DoodleView: UIView {
         }
     }
     
-//    func pan(recongnizer: UIGestureRecognizer) {
-//        switch recongnizer.state {
-//        case .Changed, .Ended:
-//            
-//        }
-//    }
+    func undoDoodle() {
+        if !paths.isEmpty {
+            paths.removeLast()
+            setNeedsDisplay()
+        }
+    }
+    
+    func clear() {
+        if !paths.isEmpty {
+            paths.removeAll()
+            setNeedsDisplay()
+        }
+    }
+    
+    func changeColor(color: UIColor) {
+        
+    }
+    
+    func setLineWidth() {
+        
+    }
     
     override func drawRect(rect: CGRect) {
         for path in paths{

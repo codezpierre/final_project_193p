@@ -83,12 +83,6 @@
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="QWB-gG-DRa"/>
-                                            <barButtonItem image="thicknessIcon" id="WuZ-D5-hND">
-                                                <connections>
-                                                    <action selector="changeThickness:" destination="hiJ-as-Ijk" id="6nN-LU-4rZ"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="7Rj-OX-Lgt"/>
                                             <barButtonItem title="clear" systemItem="trash" id="hDb-fF-37a">
                                                 <connections>
                                                     <action selector="clear:" destination="hiJ-as-Ijk" id="FzZ-ff-WdR"/>
@@ -102,11 +96,22 @@
                                             </barButtonItem>
                                         </items>
                                     </toolbar>
+                                    <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" minimumValueImage="dotSmall" maximumValueImage="dotBig" translatesAutoresizingMaskIntoConstraints="NO" id="28m-Co-IJC">
+                                        <rect key="frame" x="152" y="412" width="297" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="293" id="M68-kB-Wnv"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="sliderAction:" destination="hiJ-as-Ijk" eventType="valueChanged" id="cOQ-3b-pk9"/>
+                                        </connections>
+                                    </slider>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="28m-Co-IJC" firstAttribute="bottom" secondItem="Xg6-qg-Yzh" secondAttribute="top" id="6X5-a6-5Ai"/>
                                     <constraint firstAttribute="trailing" secondItem="Xg6-qg-Yzh" secondAttribute="trailing" id="J0d-qz-yFc"/>
                                     <constraint firstItem="Xg6-qg-Yzh" firstAttribute="leading" secondItem="SYG-en-P4e" secondAttribute="leading" id="UbZ-4l-0uJ"/>
+                                    <constraint firstItem="28m-Co-IJC" firstAttribute="centerX" secondItem="Xg6-qg-Yzh" secondAttribute="centerX" id="fC9-vr-Kd5"/>
                                     <constraint firstAttribute="bottom" secondItem="Xg6-qg-Yzh" secondAttribute="bottom" constant="50" id="pVT-uH-dJP"/>
                                 </constraints>
                             </view>
@@ -639,6 +644,8 @@
     <resources>
         <image name="JournalIcon" width="32" height="32"/>
         <image name="doodleIcon" width="32" height="32"/>
+        <image name="dotBig" width="16" height="32"/>
+        <image name="dotSmall" width="5" height="10"/>
         <image name="flightHistoryIcon" width="32" height="31"/>
         <image name="palletteIcon" width="32" height="32"/>
         <image name="photoNotAvailable" width="1000" height="900"/>
@@ -646,7 +653,6 @@
         <image name="reminisceIcon" width="32" height="32"/>
         <image name="saveButton" width="32" height="32"/>
         <image name="stateIcon" width="32" height="32"/>
-        <image name="thicknessIcon" width="32" height="32"/>
         <image name="undoIcon" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>

@@ -16,6 +16,8 @@ class StatesTableViewController: CoreDataTableViewController {
     
     var stateData = StateData()
     
+    var currCity: String?
+    
     
     private func updateDatabase(states: Dictionary<String, String>) {
         context?.performBlock {
@@ -103,14 +105,17 @@ class StatesTableViewController: CoreDataTableViewController {
     
     
     
-    /*
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
+        if let stateCell = sender as? UITableViewCell {
+            if let city = stateCell.detailTextLabel?.text {
+                if let mapvc = segue.destinationViewController as? StateMapViewController {
+                    mapvc.city = city
+                }
+            }
+        }
      }
-     */
-    
+ 
 }

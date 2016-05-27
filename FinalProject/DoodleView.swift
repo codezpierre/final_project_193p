@@ -10,29 +10,77 @@ import UIKit
 
 class DoodleView: UIView {
     
-    var paths = [UIBezierPath()] // structure to hold paths
+    var paths = [UIBezierPath]() // structure to hold paths
     var color = UIColor.blackColor()
     
-    //Hey Robbe! What's happening here is that apparently a very doable way to do this is to have an array of UIBezierPaths which you collect everytime the finger is lifted and the path is done. You actually add the path first to the array when the user first touches the screen and then the path is built upon as the users touch moves to a new location. I think if we want a very basic model with no control of linewidth or color this just needs a few more lines. I'm getting a really strange bung in the touchesMoved method which is why it's commented out rn
+    var colors = [UIColor]()
+    
+    var lineWidths = [CGFloat]()
+    
+    var currentPathColor = UIColor.blackColor()
+    
+    var currentPathWidth: CGFloat = 1.0
+    
 
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //set of touches
-        var path = UIBezierPath()
+        //UIGraphicsBeginImageContextWithOptions(self.frame.size, false, 0.0)
+        let path = UIBezierPath()
         self.paths.append(path)
         if let newPoint = touches.first?.locationInView(self) {
             self.paths.last?.moveToPoint(newPoint)
+            colors.append(currentPathColor)
+            lineWidths.append(CGFloat(currentPathWidth))
         }//CGPoint
     }
     
-//    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//        if let newPoint = touches.first?.locationInView(self) {
-//            paths.last?.addLineToPoint(touches.first?.locationInView(self))
-//        }
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if let newPoint = touches.first?.locationInView(self) { //this gives you a CGPoint
+            paths.last?.addLineToPoint(newPoint)
+            setNeedsDisplay()
+            //colors.append(currentPathColor)
+            
+        }
+    }
+    
+//    func createPhoto() {
+//        let image = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
 //    }
     
+    
+    func undoDoodle() {
+        if !paths.isEmpty {
+            paths.removeLast()
+            colors.removeLast()
+            setNeedsDisplay()
+        }
+    }
+    
+    func clear() {
+        if !paths.isEmpty {
+            paths.removeAll()
+            colors.removeAll()
+            setNeedsDisplay()
+        }
+    }
+    
+    func changeColor(color: UIColor) {
+        currentPathColor = color
+    }
+    
+    func setLineWidth(thickness: Float) {
+        currentPathWidth = CGFloat(thickness)
+    }
+    
     override func drawRect(rect: CGRect) {
-        for path in paths{
+        for (index, path) in paths.enumerate(){
+            let currColor = colors[index]
+            let thickness = lineWidths[index]
+            currColor.setStroke()
+            path.lineWidth = thickness
             path.stroke()
         }
     }

@@ -34,6 +34,7 @@
 		306411A41CF3BD6E00057D7C /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306411A31CF3BD6E00057D7C /* CoreDataTableViewController.swift */; };
 		306411A81CF3F18E00057D7C /* DoodleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306411A71CF3F18E00057D7C /* DoodleViewController.swift */; };
 		306411AA1CF3F1BD00057D7C /* DoodleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306411A91CF3F1BD00057D7C /* DoodleView.swift */; };
+		30BBCD611CF6C413009E3AD9 /* StateMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BBCD601CF6C413009E3AD9 /* StateMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		306411A31CF3BD6E00057D7C /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewController.swift; sourceTree = "<group>"; };
 		306411A71CF3F18E00057D7C /* DoodleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoodleViewController.swift; sourceTree = "<group>"; };
 		306411A91CF3F1BD00057D7C /* DoodleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoodleView.swift; sourceTree = "<group>"; };
+		30BBCD601CF6C413009E3AD9 /* StateMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 		05E484411CEBFD1F00EBF4F8 /* MajorCities */ = {
 			isa = PBXGroup;
 			children = (
+				30BBCD601CF6C413009E3AD9 /* StateMapViewController.swift */,
 				306411911CF27C9300057D7C /* StatesTableViewController.swift */,
 				05178F8A1CE656FA00232091 /* MajorCitiesTableViewCell.swift */,
 				05178F881CE656D800232091 /* MajorCitiesTableViewController.swift */,
@@ -249,6 +252,7 @@
 				306411921CF27C9300057D7C /* StatesTableViewController.swift in Sources */,
 				306411991CF27D6A00057D7C /* State+CoreDataProperties.swift in Sources */,
 				05178F9B1CE660AB00232091 /* TravelHistoryTableViewCell.swift in Sources */,
+				30BBCD611CF6C413009E3AD9 /* StateMapViewController.swift in Sources */,
 				05178F8B1CE656FA00232091 /* MajorCitiesTableViewCell.swift in Sources */,
 				05178F891CE656D800232091 /* MajorCitiesTableViewController.swift in Sources */,
 				05178F951CE6602500232091 /* PhotoCollectionViewController.swift in Sources */,

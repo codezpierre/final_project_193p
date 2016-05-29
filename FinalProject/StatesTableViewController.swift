@@ -24,8 +24,8 @@ class StatesTableViewController: CoreDataTableViewController {
             for (state, capital) in states {
                 let currState = State.addState(state, context: self.context!)
                 if let currCity = City.addCity(capital, context: self.context!) {
-                currCity.isCapital = true
-                currState?.mutableSetValueForKey("cities").addObject(currCity)
+                    currCity.isCapital = true
+                    currState?.mutableSetValueForKey("cities").addObject(currCity)
                 }
             }
         }
@@ -68,16 +68,16 @@ class StatesTableViewController: CoreDataTableViewController {
     
     // MARK: - Table view data source
     
-//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 1
-//    }
-//    
-//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        //maybe add a way to count the number of instances of an entity in a database here
-//        return states.count
-//    }
+    //    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    //        // #warning Incomplete implementation, return the number of sections
+    //        return 1
+    //    }
+    //
+    //    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    //        // #warning Incomplete implementation, return the number of rows
+    //        //maybe add a way to count the number of instances of an entity in a database here
+    //        return states.count
+    //    }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -105,17 +105,19 @@ class StatesTableViewController: CoreDataTableViewController {
     
     
     
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let stateCell = sender as? UITableViewCell {
-            if let city = stateCell.detailTextLabel?.text {
-                if let mapvc = segue.destinationViewController as? StateMapViewController {
-                    mapvc.city = city
+            if let state = stateCell.textLabel?.text{
+                if let city = stateCell.detailTextLabel?.text {
+                    if let mapvc = segue.destinationViewController as? StateMapViewController {
+                        mapvc.city = "\(city), \(state)"
+                    }
                 }
             }
         }
-     }
- 
+    }
+    
 }

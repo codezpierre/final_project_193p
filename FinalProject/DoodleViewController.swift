@@ -20,7 +20,15 @@ class DoodleViewController: UIViewController  {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    //shake to clear doodle
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == .MotionShake {
+            if !doodleView.paths.isEmpty {
+            doodleView.clear()
+            }
+        }
+    }
     
     @IBOutlet weak var doodleView: DoodleView!
     

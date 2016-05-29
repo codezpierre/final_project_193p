@@ -19,38 +19,12 @@
                         <segue destination="uqS-Gy-UnO" kind="relationship" relationship="viewControllers" id="78c-Sf-iYC"/>
                         <segue destination="CXG-9p-h6m" kind="relationship" relationship="viewControllers" id="m1i-hG-ePs"/>
                         <segue destination="rwo-KV-yHk" kind="relationship" relationship="viewControllers" id="nac-5Z-qj7"/>
-                        <segue destination="Wld-bT-KhN" kind="relationship" relationship="viewControllers" id="8y9-yg-d0H"/>
+                        <segue destination="fWU-f4-Miw" kind="relationship" relationship="viewControllers" id="php-Cu-8qN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yah-Ra-tQ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="118" y="-65"/>
-        </scene>
-        <!--Journal-->
-        <scene sceneID="0YM-MU-ier">
-            <objects>
-                <viewController title="Journal" id="Qo8-h9-N2n" customClass="JournalViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Hw6-uv-YF9"/>
-                        <viewControllerLayoutGuide type="bottom" id="YAk-hk-GrA"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zzj-VU-rG9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="wYB-4a-5o0">
-                        <barButtonItem key="leftBarButtonItem" image="doodleIcon" id="sJK-f8-Rp7">
-                            <connections>
-                                <action selector="showDoodleVC:" destination="Qo8-h9-N2n" id="4GP-yn-msc"/>
-                                <segue destination="hiJ-as-Ijk" kind="show" identifier="showDoodleVC" id="Bsu-2X-tAa"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vxz-hj-N9u" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2006" y="1343"/>
         </scene>
         <!--Doodle View Controller-->
         <scene sceneID="mi1-oz-2Mn">
@@ -123,13 +97,14 @@
                             <constraint firstAttribute="bottom" secondItem="SYG-en-P4e" secondAttribute="bottom" id="cD2-aV-ULn"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Dr2-rf-Ylk"/>
                     <connections>
                         <outlet property="doodleView" destination="SYG-en-P4e" id="795-wC-BdZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcn-za-uiR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2795" y="1351"/>
+            <point key="canvasLocation" x="2003" y="1355"/>
         </scene>
         <!--States Table View Controller-->
         <scene sceneID="zEf-Di-qH3">
@@ -577,28 +552,27 @@
             </objects>
             <point key="canvasLocation" x="1153" y="520"/>
         </scene>
-        <!--Journal-->
-        <scene sceneID="84K-8F-amS">
+        <!--Doodle-->
+        <scene sceneID="56c-HC-J9z">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wld-bT-KhN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Journal" image="JournalIcon" id="i4s-Wu-B7P"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fWU-f4-Miw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Doodle" image="doodleIcon" id="Tmi-n0-8Sd"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zCp-2s-EoT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pcg-Fj-lIt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Qo8-h9-N2n" kind="relationship" relationship="rootViewController" id="fET-lg-XBu"/>
+                        <segue destination="hiJ-as-Ijk" kind="relationship" relationship="rootViewController" id="AJ1-hs-Orl"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3hm-Ay-2N5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1bP-Ks-eq4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1153" y="1335"/>
+            <point key="canvasLocation" x="899" y="1323"/>
         </scene>
     </scenes>
     <resources>
-        <image name="JournalIcon" width="32" height="32"/>
         <image name="doodleIcon" width="32" height="32"/>
         <image name="dotBig" width="16" height="32"/>
         <image name="dotSmall" width="5" height="10"/>

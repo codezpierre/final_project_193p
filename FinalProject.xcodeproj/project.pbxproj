@@ -18,7 +18,6 @@
 		05178F8B1CE656FA00232091 /* MajorCitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F8A1CE656FA00232091 /* MajorCitiesTableViewCell.swift */; };
 		05178F8D1CE65D3000232091 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F8C1CE65D3000232091 /* PhotoCollectionViewCell.swift */; };
 		05178F8F1CE65D4300232091 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F8E1CE65D4300232091 /* GameViewController.swift */; };
-		05178F931CE65FEE00232091 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F921CE65FEE00232091 /* JournalViewController.swift */; };
 		05178F951CE6602500232091 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F941CE6602500232091 /* PhotoCollectionViewController.swift */; };
 		05178F991CE6609E00232091 /* TravelHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F981CE6609E00232091 /* TravelHistoryTableViewController.swift */; };
 		05178F9B1CE660AB00232091 /* TravelHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F9A1CE660AB00232091 /* TravelHistoryTableViewCell.swift */; };
@@ -51,7 +50,6 @@
 		05178F8A1CE656FA00232091 /* MajorCitiesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MajorCitiesTableViewCell.swift; sourceTree = "<group>"; };
 		05178F8C1CE65D3000232091 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		05178F8E1CE65D4300232091 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		05178F921CE65FEE00232091 /* JournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		05178F941CE6602500232091 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		05178F981CE6609E00232091 /* TravelHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelHistoryTableViewController.swift; sourceTree = "<group>"; };
 		05178F9A1CE660AB00232091 /* TravelHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelHistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 				05178F751CE654F700232091 /* Main.storyboard */,
 				05E4843F1CEBFD0600EBF4F8 /* Travel */,
 				05E484401CEBFD1000EBF4F8 /* Photos */,
-				05178F921CE65FEE00232091 /* JournalViewController.swift */,
 				306411A71CF3F18E00057D7C /* DoodleViewController.swift */,
 				306411A91CF3F1BD00057D7C /* DoodleView.swift */,
 				05178F8E1CE65D4300232091 /* GameViewController.swift */,
@@ -246,7 +243,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				05178F991CE6609E00232091 /* TravelHistoryTableViewController.swift in Sources */,
-				05178F931CE65FEE00232091 /* JournalViewController.swift in Sources */,
 				05178F8F1CE65D4300232091 /* GameViewController.swift in Sources */,
 				306411A01CF2899100057D7C /* NewTripViewController.swift in Sources */,
 				306411921CF27C9300057D7C /* StatesTableViewController.swift in Sources */,

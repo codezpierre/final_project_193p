@@ -24,7 +24,7 @@ class Trip: NSManagedObject {
     
     class func createTrip(destination: String, departureDate: NSDate, returnDate: NSDate, image: NSData) -> Trip? {
         if let trip = NSEntityDescription.insertNewObjectForEntityForName("Trip", inManagedObjectContext: context!) as? Trip {
-            //trip.destination = destination
+            trip.destination = City.addCity(destination, context: context!)!
             trip.departureDate = departureDate
             trip.returnDate = returnDate
             trip.image = image

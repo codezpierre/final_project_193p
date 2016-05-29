@@ -18,6 +18,9 @@ class TravelHistoryTableViewController: UITableViewController {
         }
     }
     
+    
+    //var city: [City]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

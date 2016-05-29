@@ -27,7 +27,7 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
     //variables set in the DatePickerVC
     var savedDepartDate: NSDate?
     var savedReturnDate: NSDate?
-
+    
     
     // MARK: Private API
     private var aspectRatioConstraint: NSLayoutConstraint?
@@ -114,7 +114,7 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func saveDate(segue: UIStoryboardSegue) {
         //empty
     }
- 
+    
     
     //    // MARK: Gestures
     //    // This function handles a tap gesture on the photo. When a tap gesture
@@ -156,7 +156,11 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
     //    }
     //}
     
+    //let dateFormatter = NSDateFormatter()
+    //                dateFormatter.dateFormat("yyyy-MM-dd hh:mm:ssZZZZ")
+    //                let date = dateFormatter.dateFromString(departDateLabel)
     
+
     
     // MARK: - Navigation
     
@@ -167,7 +171,7 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
         if let pickDateVC = destinationVC as? DatePickerViewController {
             if identifier == "setDepartureDate" {
                 pickDateVC.newTripViewController = self
-               // pickDateVC.departureDate = NSDate;
+                // pickDateVC.departureDate = NSDate;
                 pickDateVC.isDeparture = true
                 
             }
@@ -176,12 +180,8 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
                 pickDateVC.isDeparture = false
             }
         }
-        if let unwindToVC = destinationVC as? TravelHistoryTableViewController {
-//                let dateFormatter = NSDateFormatter()
-//                dateFormatter.dateFormat("yyyy-MM-dd hh:mm:ssZZZZ")
-//                let date = dateFormatter.dateFromString(departDateLabel)
-
-                Trip.createTrip(DestinationTextfield.text!, departureDate: savedDepartDate!, returnDate: savedReturnDate!, image: UIImagePNGRepresentation(image!)!)
+        if identifier == "saveNewTrip" {
+            Trip.createTrip(DestinationTextfield.text!, departureDate: savedDepartDate!, returnDate: savedReturnDate!, image: UIImagePNGRepresentation(image!)!)
             
         }
     }

@@ -60,10 +60,17 @@ class DoodleView: UIView {
     
     func clear() {
         if !paths.isEmpty {
-            paths.removeAll()
-            colors.removeAll()
-            lineWidths.removeAll()
-            setNeedsDisplay()
+            //add animation
+            UIView.transitionWithView(self,
+                                      duration: 1.0,
+                                      options: [UIViewAnimationOptions.TransitionCurlUp],
+                                      animations: { self.paths.removeAll();
+                                        self.colors.removeAll();
+                                        self.lineWidths.removeAll();
+                                        self.setNeedsDisplay();},
+                                      completion: nil
+            )
+            
         }
     }
     

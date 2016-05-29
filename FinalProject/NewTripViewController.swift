@@ -179,8 +179,8 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
                 pickDateVC.newTripViewController = self
                 pickDateVC.isDeparture = false
             }
-        }
-        if identifier == "saveNewTrip" {
+        } else {
+            //need to fix this to handle the case where image doesnt exist
             Trip.createTrip(DestinationTextfield.text!, departureDate: savedDepartDate!, returnDate: savedReturnDate!, image: UIImagePNGRepresentation(image!)!)
             
         }

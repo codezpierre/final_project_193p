@@ -21,10 +21,12 @@ class DoodleView: UIView {
     
     var currentPathWidth: CGFloat = 1.0
     
+    var currentGraphicsContext: CGContextRef?
+    
+
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //set of touches
-        //UIGraphicsBeginImageContextWithOptions(self.frame.size, false, 0.0)
         let path = UIBezierPath()
         self.paths.append(path)
         if let newPoint = touches.first?.locationInView(self) {
@@ -42,11 +44,17 @@ class DoodleView: UIView {
         }
     }
     
-//    func createPhoto() {
-//        let image = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-//    }
+    func createPhoto() -> [AnyObject]{
+        UIGraphicsBeginImageContext(self.bounds.size)
+        self.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        //call UIActivityViewController so that you can share the photo
+        let objectToShare = [image]
+        return objectToShare
+        //UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+    }
     
     
     func undoDoodle() {
@@ -83,6 +91,7 @@ class DoodleView: UIView {
     }
     
     override func drawRect(rect: CGRect) {
+        //currentGraphicsContext = UIGraphicsGetCurrentContext() //first
         for (index, path) in paths.enumerate(){
             let currColor = colors[index]
             let thickness = lineWidths[index]

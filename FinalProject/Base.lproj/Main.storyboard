@@ -39,62 +39,58 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYG-en-P4e" customClass="DoodleView" customModule="FinalProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <subviews>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xg6-qg-Yzh">
-                                        <rect key="frame" x="0.0" y="442" width="600" height="44"/>
-                                        <items>
-                                            <barButtonItem image="undoIcon" style="done" id="ngb-yL-fCf">
-                                                <connections>
-                                                    <action selector="undo:" destination="hiJ-as-Ijk" id="BYw-X3-RSM"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="tdr-zp-qTO"/>
-                                            <barButtonItem image="palletteIcon" id="LMa-QV-sLA">
-                                                <connections>
-                                                    <action selector="changeColor:" destination="hiJ-as-Ijk" id="Zlg-kf-ac0"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="QWB-gG-DRa"/>
-                                            <barButtonItem title="clear" systemItem="trash" id="hDb-fF-37a">
-                                                <connections>
-                                                    <action selector="clear:" destination="hiJ-as-Ijk" id="FzZ-ff-WdR"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="OPw-8f-9cU"/>
-                                            <barButtonItem image="saveButton" id="kMv-N9-Dig">
-                                                <connections>
-                                                    <action selector="save:" destination="hiJ-as-Ijk" id="ufS-gb-dw2"/>
-                                                </connections>
-                                            </barButtonItem>
-                                        </items>
-                                    </toolbar>
-                                    <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" minimumValueImage="dotSmall" maximumValueImage="dotBig" translatesAutoresizingMaskIntoConstraints="NO" id="28m-Co-IJC">
-                                        <rect key="frame" x="152" y="412" width="297" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="293" id="M68-kB-Wnv"/>
-                                        </constraints>
-                                        <connections>
-                                            <action selector="sliderAction:" destination="hiJ-as-Ijk" eventType="valueChanged" id="cOQ-3b-pk9"/>
-                                        </connections>
-                                    </slider>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="28m-Co-IJC" firstAttribute="bottom" secondItem="Xg6-qg-Yzh" secondAttribute="top" id="6X5-a6-5Ai"/>
-                                    <constraint firstAttribute="trailing" secondItem="Xg6-qg-Yzh" secondAttribute="trailing" id="J0d-qz-yFc"/>
-                                    <constraint firstItem="Xg6-qg-Yzh" firstAttribute="leading" secondItem="SYG-en-P4e" secondAttribute="leading" id="UbZ-4l-0uJ"/>
-                                    <constraint firstItem="28m-Co-IJC" firstAttribute="centerX" secondItem="Xg6-qg-Yzh" secondAttribute="centerX" id="fC9-vr-Kd5"/>
-                                    <constraint firstAttribute="bottom" secondItem="Xg6-qg-Yzh" secondAttribute="bottom" constant="50" id="pVT-uH-dJP"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="64" width="600" height="397"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xg6-qg-Yzh">
+                                <rect key="frame" x="0.0" y="507" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem image="undoIcon" style="done" id="ngb-yL-fCf">
+                                        <connections>
+                                            <action selector="undo:" destination="hiJ-as-Ijk" id="BYw-X3-RSM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="tdr-zp-qTO"/>
+                                    <barButtonItem image="palletteIcon" id="LMa-QV-sLA">
+                                        <connections>
+                                            <action selector="changeColor:" destination="hiJ-as-Ijk" id="Zlg-kf-ac0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QWB-gG-DRa"/>
+                                    <barButtonItem title="clear" systemItem="trash" id="hDb-fF-37a">
+                                        <connections>
+                                            <action selector="clear:" destination="hiJ-as-Ijk" id="FzZ-ff-WdR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="OPw-8f-9cU"/>
+                                    <barButtonItem image="saveButton" id="kMv-N9-Dig">
+                                        <connections>
+                                            <action selector="save:" destination="hiJ-as-Ijk" id="ufS-gb-dw2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" minimumValueImage="dotSmall" maximumValueImage="dotBig" translatesAutoresizingMaskIntoConstraints="NO" id="28m-Co-IJC">
+                                <rect key="frame" x="152" y="468" width="297" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="293" id="zzr-7t-OUR"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderAction:" destination="hiJ-as-Ijk" eventType="valueChanged" id="cOQ-3b-pk9"/>
+                                </connections>
+                            </slider>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="SYG-en-P4e" firstAttribute="leading" secondItem="oT7-3k-bJG" secondAttribute="leading" id="251-M9-2qM"/>
-                            <constraint firstItem="SYG-en-P4e" firstAttribute="top" secondItem="ax3-2K-41j" secondAttribute="bottom" id="KVI-de-OZp"/>
-                            <constraint firstAttribute="trailing" secondItem="SYG-en-P4e" secondAttribute="trailing" id="ONJ-Gt-KFk"/>
-                            <constraint firstAttribute="bottom" secondItem="SYG-en-P4e" secondAttribute="bottom" id="cD2-aV-ULn"/>
+                            <constraint firstItem="Xg6-qg-Yzh" firstAttribute="leading" secondItem="oT7-3k-bJG" secondAttribute="leadingMargin" constant="-20" id="3cx-Ev-B7a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SYG-en-P4e" secondAttribute="trailing" constant="-20" id="4hb-kT-3KM"/>
+                            <constraint firstItem="Xg6-qg-Yzh" firstAttribute="top" secondItem="28m-Co-IJC" secondAttribute="bottom" constant="8" id="8IG-0Y-6Ul"/>
+                            <constraint firstItem="28m-Co-IJC" firstAttribute="top" secondItem="SYG-en-P4e" secondAttribute="bottom" constant="7" id="8aH-UF-wlm"/>
+                            <constraint firstItem="SYG-en-P4e" firstAttribute="top" secondItem="ax3-2K-41j" secondAttribute="bottom" id="CmN-DI-Pau"/>
+                            <constraint firstItem="SYG-en-P4e" firstAttribute="leading" secondItem="oT7-3k-bJG" secondAttribute="leadingMargin" constant="-20" id="DfH-XW-wvc"/>
+                            <constraint firstItem="28m-Co-IJC" firstAttribute="centerX" secondItem="oT7-3k-bJG" secondAttribute="centerX" id="Oc3-27-XNn"/>
+                            <constraint firstItem="GlA-Et-wwz" firstAttribute="top" secondItem="Xg6-qg-Yzh" secondAttribute="bottom" id="dDF-YE-voa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xg6-qg-Yzh" secondAttribute="trailing" constant="-20" id="v7a-YU-9cb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Dr2-rf-Ylk"/>

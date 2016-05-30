@@ -43,7 +43,12 @@ class DoodleViewController: UIViewController  {
     
     
     @IBAction func save(sender: UIBarButtonItem) {
-        //doodleView.createPhoto()
+        let image = doodleView.createPhoto()
+        
+        //create UIActivityViewController to share image
+        let activityVC = UIActivityViewController(activityItems: image, applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = sender.customView
+        self.presentViewController(activityVC, animated: true, completion: nil)
     }
 
     @IBAction func changeColor(sender: UIBarButtonItem) {

@@ -28,9 +28,9 @@ class TravelHistoryTableViewCell: UITableViewCell {
         departDateLabel?.text = "Depart Date"
         returnDateLabel?.text = "Return Date"
         
-        // load new information from our tweet (if any)
         if let trip = self.trip
         {
+            //set cell data
             if let imageData = trip.image {
                 tripImageView?.image = UIImage(data: imageData)
             }
@@ -49,6 +49,7 @@ class TravelHistoryTableViewCell: UITableViewCell {
             }
             departDateLabel?.text = formatter_depart.stringFromDate(trip.departureDate!) ?? "Depart Date"
             
+            //formatting NSDate to be readable
             let formatter_return = NSDateFormatter()
             if NSDate().timeIntervalSinceDate(trip.returnDate!) > 24*60*60 {
                 formatter_return.dateStyle = NSDateFormatterStyle.ShortStyle

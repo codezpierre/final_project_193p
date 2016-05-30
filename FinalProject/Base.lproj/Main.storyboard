@@ -227,12 +227,31 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="mWp-gc-dnZ">
                         <barButtonItem key="leftBarButtonItem" title="Import Photos" id="sXn-7v-36q"/>
+                        <barButtonItem key="rightBarButtonItem" title="Take Photo" id="1rL-hz-Qi9"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dyc-qx-B3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2014" y="528"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="L0r-AE-sb1">
+            <objects>
+                <viewController id="fPn-CD-Bcv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vhn-0Y-gOk"/>
+                        <viewControllerLayoutGuide type="bottom" id="A4j-D6-4Oh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mzK-um-DzA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AQ1-sX-WUF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2672" y="520"/>
         </scene>
         <!--Travel History-->
         <scene sceneID="aZD-R4-Stu">
@@ -294,6 +313,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ijP-Fl-jiq">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="New Trip" id="A4I-xY-WX4">
                             <connections>
                                 <segue destination="cqL-ry-i7z" kind="show" identifier="createNewTrip" id="qCA-xu-B1w"/>

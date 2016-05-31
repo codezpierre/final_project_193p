@@ -19,6 +19,7 @@ class TravelHistoryTableViewController: UITableViewController, UITextFieldDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Travel Log"
     }
     
     var managedObjectContext: NSManagedObjectContext? {

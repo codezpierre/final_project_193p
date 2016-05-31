@@ -100,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcn-za-uiR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2003" y="1355"/>
+            <point key="canvasLocation" x="2067" y="1347"/>
         </scene>
         <!--States Table View Controller-->
         <scene sceneID="zEf-Di-qH3">
@@ -221,15 +221,12 @@
                         </connections>
                     </collectionView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="mWp-gc-dnZ">
-                        <barButtonItem key="leftBarButtonItem" title="Import Photos" id="sXn-7v-36q"/>
-                        <barButtonItem key="rightBarButtonItem" title="Take Photo" id="1rL-hz-Qi9"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="mWp-gc-dnZ"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dyc-qx-B3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2014" y="528"/>
+            <point key="canvasLocation" x="2050" y="527"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="L0r-AE-sb1">
@@ -334,13 +331,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Eg-85-rRb">
-                                <rect key="frame" x="102" y="180" width="94" height="30"/>
-                                <state key="normal" title="Upload Photo"/>
-                                <connections>
-                                    <action selector="uploadPhoto:" destination="LMW-rQ-asb" eventType="touchUpInside" id="dur-DZ-1vm"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="50K-3P-sVK">
                                 <rect key="frame" x="20" y="90" width="176" height="82"/>
                                 <subviews>
@@ -416,13 +406,29 @@
                                 <rect key="frame" x="20" y="218" width="360" height="221"/>
                                 <color key="backgroundColor" red="0.78572423670000002" green="0.78572423670000002" blue="0.78572423670000002" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvN-G0-FEI">
+                                <rect key="frame" x="303" y="180" width="77" height="30"/>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="LMW-rQ-asb" eventType="touchUpInside" id="05l-30-Ze1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Eg-85-rRb">
+                                <rect key="frame" x="20" y="180" width="94" height="30"/>
+                                <state key="normal" title="Upload Photo"/>
+                                <connections>
+                                    <action selector="uploadPhoto:" destination="LMW-rQ-asb" eventType="touchUpInside" id="dur-DZ-1vm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9Eg-85-rRb" firstAttribute="top" secondItem="50K-3P-sVK" secondAttribute="bottom" constant="8" id="5r5-mm-8Sm"/>
-                            <constraint firstItem="9Eg-85-rRb" firstAttribute="leading" secondItem="HVB-Gg-QuA" secondAttribute="leadingMargin" constant="82" id="eF3-be-olM"/>
+                            <constraint firstItem="RvN-G0-FEI" firstAttribute="top" secondItem="HrX-Mp-TRh" secondAttribute="bottom" constant="116" id="9P4-vY-pXI"/>
+                            <constraint firstItem="RvN-G0-FEI" firstAttribute="leading" secondItem="HVB-Gg-QuA" secondAttribute="leadingMargin" constant="283" id="ZeD-Jf-pjp"/>
                             <constraint firstItem="50K-3P-sVK" firstAttribute="top" secondItem="HrX-Mp-TRh" secondAttribute="bottom" constant="26" id="emY-Sb-nBG"/>
                             <constraint firstAttribute="leadingMargin" secondItem="50K-3P-sVK" secondAttribute="leading" id="j8O-9b-59V"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="9Eg-85-rRb" secondAttribute="leading" id="rg1-ZC-usa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Trip" id="1Yc-UN-wJL">
@@ -585,7 +591,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1bP-Ks-eq4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="899" y="1323"/>
+            <point key="canvasLocation" x="1179" y="1315"/>
         </scene>
     </scenes>
     <resources>
@@ -594,7 +600,7 @@
         <image name="dotSmall" width="5" height="10"/>
         <image name="flightHistoryIcon" width="32" height="31"/>
         <image name="palletteIcon" width="32" height="32"/>
-        <image name="photoNotAvailable" width="1000" height="900"/>
+        <image name="photoNotAvailable" width="1200" height="900"/>
         <image name="reminisceIcon" width="32" height="32"/>
         <image name="saveButton" width="32" height="32"/>
         <image name="stateIcon" width="32" height="32"/>

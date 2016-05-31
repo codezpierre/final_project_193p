@@ -13,10 +13,12 @@ class StateMapViewController: UIViewController {
     
     var city: String?
     let regionRadius: CLLocationDistance = 1000
+    //let locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        //locationManager
 
         // Do any additional setup after loading the view.
     }

@@ -35,9 +35,7 @@ class TravelHistoryTableViewCell: UITableViewCell {
                 tripImageView?.image = UIImage(data: imageData)
             }
             
-            destinationLabel?.text = trip.destination?.cityText ?? "Destination"
-            print(destinationLabel?.text)
-            
+            destinationLabel?.text = trip.destination?.cityText ?? "Destination"            
             returnDateLabel?.text = String(trip.returnDate) ?? "Return Date"
             
             

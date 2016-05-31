@@ -18,7 +18,7 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var departDateLabel: UILabel!
     @IBOutlet weak var returnDateLabel: UILabel!
     
-    
+    let picker = UIImagePickerController()
     
     @IBAction func cancel(sender: AnyObject) {
         let alert = UIAlertController(
@@ -61,6 +61,7 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
     // MARK: UIViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Create a New Trip"
         image = UIImage(named: "photoNotAvailable")
     }
     
@@ -90,26 +91,55 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
     /* importPhotoFromLibrary() presents a new view controller where the user
      can pick a photo from their photo library */
     func importPhotoFromLibrary() {
-        let picker = UIImagePickerController()
         picker.sourceType = .PhotoLibrary
         picker.mediaTypes = [kUTTypeImage as String]
         picker.allowsEditing = true
         picker.delegate = self
         presentViewController(picker, animated: true, completion: nil)
     }
-
-//    func takeCameraPhoto() {
-//        picker.sourceType = ImagePickerControllerSourceType.Camera
-//        picker.delegate = self
-//    }
     
-//    picker.allowsEditing = false
-//    picker.sourceType = UIImagePickerControllerSourceType.Camera
-//    picker.cameraCaptureMode = .Photo
-//    picker.modalPresentationStyle = .FullScreen
-//    presentViewController(picker,
-//    animated: true,
-//    completion: nil)
+    @IBAction func takePhoto(sender: AnyObject) {
+        if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
+            picker.allowsEditing = false
+            picker.sourceType = UIImagePickerControllerSourceType.Camera
+            picker.cameraCaptureMode = .Photo
+            picker.modalPresentationStyle = .FullScreen
+            presentViewController(picker,
+                                  animated: true,
+                                  completion: nil)
+        } else {
+            cameraNotAvailable()
+        }
+    }
+    
+    func cameraNotAvailable(){
+
+        let alert = UIAlertController(
+            title: "No Camera",
+            message: "Sorry, this device has no camera",
+            preferredStyle: .Alert)
+        let okAction = UIAlertAction(
+            title: "OK",
+            style:.Default,
+            handler: nil)
+        alert.addAction(okAction)
+        presentViewController(alert,
+                              animated: true,
+                              completion: nil)
+    }
+    
+    
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "unwindFromNewTripDone" {
+            if DestinationTextfield.text == "" || savedDepartDate == nil || savedReturnDate == nil || imageView.image == "photoNotAvailable" {
+                return false
+            } else {
+                return true
+            }
+        }
+        return true
+    }
     
     //unwinding from DatePickerVC
     @IBAction func saveDate(segue: UIStoryboardSegue) {
@@ -130,9 +160,32 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
                 pickDateVC.isDeparture = false
             }
         } else {
-            //need to fix this to handle the case where image doesnt exist
+            print(DestinationTextfield.text)
+            print(departDateLabel.text)
+            print(returnDateLabel.text)
+            print(savedDepartDate)
+            print(savedReturnDate)
+            print(imageView.image)
             Trip.createTrip(DestinationTextfield.text!, departureDate: savedDepartDate!, returnDate: savedReturnDate!, image: UIImagePNGRepresentation(image!)!)
             
+//            let alert = UIAlertController(
+//                title: "Share Trip Image",
+//                message: "Share Trip Photo with Friends?",
+//                preferredStyle: UIAlertControllerStyle.Alert
+//            )
+//            
+//            //Isaiah and Amy helped me a little with this function when I was missing the "handler" parameter
+//            
+//            alert.addAction(UIAlertAction(title: "No Thanks", style: .Default, handler: { action  in
+//                //do nothing
+//            }))
+//            
+//            alert.addAction(UIAlertAction(title: "Okay", style: .Default, handler: { action  in
+//                //create UIActivityViewController to share trip
+//                let activityVC = UIActivityViewController(activityItems: image, applicationActivities: nil)
+//                activityVC.popoverPresentationController?.sourceView = sender.customView
+//                self.presentViewController(activityVC, animated: true, completion: nil)
+//            }))
         }
     }
 }

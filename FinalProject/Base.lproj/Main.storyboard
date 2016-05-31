@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cUs-v9-CbN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aZz-Fe-eb8">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -26,6 +26,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yah-Ra-tQ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="118" y="-65"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="7sd-8e-0b9">
+            <objects>
+                <viewController id="aZz-Fe-eb8" customClass="LoginViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EkJ-HA-KLk"/>
+                        <viewControllerLayoutGuide type="bottom" id="zEu-SO-pkL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jCA-C0-TzL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="cUs-v9-CbN" kind="presentation" identifier="enterApp" id="AbE-qT-lVP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FbM-Tw-ymF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-804" y="-65"/>
         </scene>
         <!--Doodle View Controller-->
         <scene sceneID="mi1-oz-2Mn">
@@ -101,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcn-za-uiR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2059" y="1787"/>
+            <point key="canvasLocation" x="2067" y="2019"/>
         </scene>
         <!--Travel the States-->
         <scene sceneID="zEf-Di-qH3">
@@ -574,7 +595,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1bP-Ks-eq4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1123" y="1811"/>
+            <point key="canvasLocation" x="1291" y="2011"/>
         </scene>
         <!--Browse Map View Controller-->
         <scene sceneID="4ee-y8-mPT">
@@ -658,11 +679,11 @@
             </objects>
             <point key="canvasLocation" x="2806" y="429"/>
         </scene>
-        <!--Item-->
+        <!--Orient Yourself-->
         <scene sceneID="sTx-YJ-smb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rpd-EN-PeQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="EiB-PX-rjW"/>
+                    <tabBarItem key="tabBarItem" title="Orient Yourself" image="car" selectedImage="car" id="EiB-PX-rjW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ubb-e9-d4x">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -679,6 +700,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="car" width="30" height="30"/>
         <image name="doodleIcon" width="32" height="32"/>
         <image name="dotBig" width="16" height="32"/>
         <image name="dotSmall" width="5" height="10"/>

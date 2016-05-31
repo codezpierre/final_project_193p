@@ -18,6 +18,11 @@
 		05178F951CE6602500232091 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F941CE6602500232091 /* PhotoCollectionViewController.swift */; };
 		05178F991CE6609E00232091 /* TravelHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F981CE6609E00232091 /* TravelHistoryTableViewController.swift */; };
 		05178F9B1CE660AB00232091 /* TravelHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F9A1CE660AB00232091 /* TravelHistoryTableViewCell.swift */; };
+		053C58B01CFE04540042081C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053C58AF1CFE04540042081C /* LoginViewController.swift */; };
+		053C58BF1CFE08E50042081C /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053C58BB1CFE08E50042081C /* FBSDKCoreKit.framework */; };
+		053C58C01CFE08E50042081C /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053C58BC1CFE08E50042081C /* FBSDKLoginKit.framework */; };
+		053C58C11CFE08E50042081C /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053C58BD1CFE08E50042081C /* FBSDKMessengerShareKit.framework */; };
+		053C58C21CFE08E50042081C /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053C58BE1CFE08E50042081C /* FBSDKShareKit.framework */; };
 		05F9BC601CFD602B00C3C457 /* BrowseMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9BC5F1CFD602B00C3C457 /* BrowseMapViewController.swift */; };
 		05F9BC641CFD694400C3C457 /* SearchForLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9BC631CFD694400C3C457 /* SearchForLocationTableViewController.swift */; };
 		306411901CF27C6100057D7C /* StateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064118F1CF27C6100057D7C /* StateData.swift */; };
@@ -49,6 +54,11 @@
 		05178F941CE6602500232091 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		05178F981CE6609E00232091 /* TravelHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelHistoryTableViewController.swift; sourceTree = "<group>"; };
 		05178F9A1CE660AB00232091 /* TravelHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		053C58AF1CFE04540042081C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		053C58BB1CFE08E50042081C /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		053C58BC1CFE08E50042081C /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		053C58BD1CFE08E50042081C /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
+		053C58BE1CFE08E50042081C /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		05F9BC5F1CFD602B00C3C457 /* BrowseMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseMapViewController.swift; sourceTree = "<group>"; };
 		05F9BC631CFD694400C3C457 /* SearchForLocationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchForLocationTableViewController.swift; sourceTree = "<group>"; };
 		3064118F1CF27C6100057D7C /* StateData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateData.swift; sourceTree = "<group>"; };
@@ -71,6 +81,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				053C58C21CFE08E50042081C /* FBSDKShareKit.framework in Frameworks */,
+				053C58C01CFE08E50042081C /* FBSDKLoginKit.framework in Frameworks */,
+				053C58C11CFE08E50042081C /* FBSDKMessengerShareKit.framework in Frameworks */,
+				053C58BF1CFE08E50042081C /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +110,11 @@
 		05178F701CE654F700232091 /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				053C58BB1CFE08E50042081C /* FBSDKCoreKit.framework */,
+				053C58BC1CFE08E50042081C /* FBSDKLoginKit.framework */,
+				053C58BD1CFE08E50042081C /* FBSDKMessengerShareKit.framework */,
+				053C58BE1CFE08E50042081C /* FBSDKShareKit.framework */,
+				053C58AF1CFE04540042081C /* LoginViewController.swift */,
 				05178F751CE654F700232091 /* Main.storyboard */,
 				05E4843F1CEBFD0600EBF4F8 /* Travel */,
 				05E484401CEBFD1000EBF4F8 /* Photos */,
@@ -259,6 +278,7 @@
 				3064119B1CF27D6A00057D7C /* City+CoreDataProperties.swift in Sources */,
 				05178F741CE654F700232091 /* ViewController.swift in Sources */,
 				05F9BC641CFD694400C3C457 /* SearchForLocationTableViewController.swift in Sources */,
+				053C58B01CFE04540042081C /* LoginViewController.swift in Sources */,
 				306411AA1CF3F1BD00057D7C /* DoodleView.swift in Sources */,
 				3064119E1CF27D6A00057D7C /* Trip.swift in Sources */,
 				306411901CF27C6100057D7C /* StateData.swift in Sources */,
@@ -384,6 +404,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FinalProject",
+				);
 				INFOPLIST_FILE = FinalProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs193p.sradzi13.FinalProject;
@@ -395,6 +420,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FinalProject",
+				);
 				INFOPLIST_FILE = FinalProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs193p.sradzi13.FinalProject;

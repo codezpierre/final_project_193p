@@ -19,9 +19,9 @@ class BrowseMapViewController: UIViewController {
     
     var resultSearchController:UISearchController? = nil
     let locationManager = CLLocationManager()
-
+    
     var selectedPin:MKPlacemark? = nil
-
+    
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
@@ -50,7 +50,6 @@ class BrowseMapViewController: UIViewController {
         //passes along handle of mapView to the SearchforLocationVC
         locationSearchTable.mapView = mapView
         locationSearchTable.handleMapSearchDelegate = self
-        
     }
     
     func getDirections(){
@@ -95,7 +94,7 @@ extension BrowseMapViewController : HandleMapSearch {
         annotation.coordinate = placemark.coordinate
         annotation.title = placemark.name
         if let city = placemark.locality,
-        let state = placemark.administrativeArea {
+            let state = placemark.administrativeArea {
             annotation.subtitle = "\(city) \(state)"
         }
         //adds annotation to map
@@ -106,6 +105,7 @@ extension BrowseMapViewController : HandleMapSearch {
     }
 }
 
+//Wires up car icon on pin to transfer user to Apple Maps for driving directions
 extension BrowseMapViewController : MKMapViewDelegate {
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView?{
         if annotation is MKUserLocation {
@@ -119,7 +119,7 @@ extension BrowseMapViewController : MKMapViewDelegate {
         let smallSquare = CGSize(width: 30, height: 30)
         let button = UIButton(frame: CGRect(origin: CGPointZero, size: smallSquare))
         button.setBackgroundImage(UIImage(named: "car"), forState: .Normal)
-        button.addTarget(self, action: "getDirection", forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: "getDirections", forControlEvents: .TouchUpInside)
         pinView?.leftCalloutAccessoryView = button
         return pinView
     }

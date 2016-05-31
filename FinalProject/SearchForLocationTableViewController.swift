@@ -14,6 +14,7 @@ class SearchForLocationTableViewController: UITableViewController {
     var mapView:MKMapView? = nil
     var handleMapSearchDelegate:HandleMapSearch? = nil
     
+        //parces location names
         func parseAddress(selectedItem:MKPlacemark) -> String {
             // insert first space
             let firstSpace = (selectedItem.subThoroughfare != nil && selectedItem.thoroughfare != nil) ? " " : ""
@@ -39,7 +40,7 @@ class SearchForLocationTableViewController: UITableViewController {
         }
 }
 
-
+//updates results as searchBarText changes
 extension SearchForLocationTableViewController : UISearchResultsUpdating {
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         guard let mapView = mapView,
@@ -58,6 +59,7 @@ extension SearchForLocationTableViewController : UISearchResultsUpdating {
     }
 }
 
+//configures tableView
 extension SearchForLocationTableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return matchingItems.count
@@ -67,13 +69,12 @@ extension SearchForLocationTableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell")!
         let selectedItem = matchingItems[indexPath.row].placemark
         cell.textLabel?.text = selectedItem.name
-        cell.detailTextLabel?.text = ""//parseAddress(selectedItem)
+        cell.detailTextLabel?.text = parseAddress(selectedItem)
         return cell
     }
-    
-
 }
 
+//allows transition between tableView cell and pin on map
 extension SearchForLocationTableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let selectedItem = matchingItems[indexPath.row].placemark

@@ -47,26 +47,6 @@ class TravelHistoryTableViewController: UITableViewController, UITextFieldDelega
         super.didReceiveMemoryWarning()
     }
     
-//    //Allowing User to filter through tweets using a key word
-//    var searchText: String? {
-//        didSet {
-//            searchTextField?.text = searchText
-//            title = searchText
-//        }
-//    }
-//    
-//    @IBOutlet weak var searchTextField: UITextField! {
-//        didSet{
-//            searchTextField.delegate = self
-//            searchTextField.text = searchText
-//        }
-//    }
-//    
-//    func textFieldShouldReturn(textField: UITextField) -> Bool {
-//        textField.resignFirstResponder()
-//        searchText = textField.text
-//        return true
-//    }
     
     // MARK: - Table view data source
     

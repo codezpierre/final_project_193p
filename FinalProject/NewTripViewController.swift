@@ -6,6 +6,10 @@
 //  Copyright © 2016 Sarah Radzihovsky. All rights reserved.
 //
 
+//Isaiah and Amy helped me a little with the UIAlertAction
+//date formatting help came from https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/
+
+
 import UIKit
 import MobileCoreServices
 import CoreData
@@ -26,8 +30,6 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
             message:"Are you sure want to Cancel?",
             preferredStyle: UIAlertControllerStyle.Alert
         )
-        
-        //Isaiah and Amy helped me a little with this function when I was missing the "handler" parameter
         
         alert.addAction(UIAlertAction(title: "No", style: .Default, handler: { action  in
             //do nothing
@@ -71,6 +73,7 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     override func viewWillAppear(animated: Bool) {
+        //formats return and depart date and updates the Labels
         if savedDepartDate != nil {
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateStyle = .MediumStyle
@@ -117,6 +120,7 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
         presentViewController(picker, animated: true, completion: nil)
     }
     
+    /* takePhoto() allows user to use their camera to take a photo if their device is connected */
     @IBAction func takePhoto(sender: AnyObject) {
         if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
             picker.allowsEditing = false
@@ -131,8 +135,8 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
     }
     
+    //used to redirect simulator so it doesn't crash on account of not having a camera option
     func cameraNotAvailable(){
-
         let alert = UIAlertController(
             title: "No Camera",
             message: "Sorry, this device has no camera",
@@ -149,6 +153,7 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "unwindFromNewTripDone" {
+            //if any of these field are Nil, you will not be able to click "Done"
             if DestinationTextfield.text == "" || savedDepartDate == nil || savedReturnDate == nil || imageView.image == "photoNotAvailable" {
                 return false
             } else {
@@ -177,32 +182,8 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
                 pickDateVC.isDeparture = false
             }
         } else {
-            print(DestinationTextfield.text)
-            print(departDateLabel.text)
-            print(returnDateLabel.text)
-            print(savedDepartDate)
-            print(savedReturnDate)
-            print(imageView.image)
             Trip.createTrip(DestinationTextfield.text!, departureDate: savedDepartDate!, returnDate: savedReturnDate!, image: UIImagePNGRepresentation(image!)!)
-            
-//            let alert = UIAlertController(
-//                title: "Share Trip Image",
-//                message: "Share Trip Photo with Friends?",
-//                preferredStyle: UIAlertControllerStyle.Alert
-//            )
-//            
-//            //Isaiah and Amy helped me a little with this function when I was missing the "handler" parameter
-//            
-//            alert.addAction(UIAlertAction(title: "No Thanks", style: .Default, handler: { action  in
-//                //do nothing
-//            }))
-//            
-//            alert.addAction(UIAlertAction(title: "Okay", style: .Default, handler: { action  in
-//                //create UIActivityViewController to share trip
-//                let activityVC = UIActivityViewController(activityItems: image, applicationActivities: nil)
-//                activityVC.popoverPresentationController?.sourceView = sender.customView
-//                self.presentViewController(activityVC, animated: true, completion: nil)
-//            }))
+
         }
     }
 }

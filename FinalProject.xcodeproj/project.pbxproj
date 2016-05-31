@@ -18,6 +18,8 @@
 		05178F951CE6602500232091 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F941CE6602500232091 /* PhotoCollectionViewController.swift */; };
 		05178F991CE6609E00232091 /* TravelHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F981CE6609E00232091 /* TravelHistoryTableViewController.swift */; };
 		05178F9B1CE660AB00232091 /* TravelHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05178F9A1CE660AB00232091 /* TravelHistoryTableViewCell.swift */; };
+		05F9BC601CFD602B00C3C457 /* BrowseMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9BC5F1CFD602B00C3C457 /* BrowseMapViewController.swift */; };
+		05F9BC641CFD694400C3C457 /* SearchForLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9BC631CFD694400C3C457 /* SearchForLocationTableViewController.swift */; };
 		306411901CF27C6100057D7C /* StateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064118F1CF27C6100057D7C /* StateData.swift */; };
 		306411921CF27C9300057D7C /* StatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306411911CF27C9300057D7C /* StatesTableViewController.swift */; };
 		306411991CF27D6A00057D7C /* State+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306411931CF27D6A00057D7C /* State+CoreDataProperties.swift */; };
@@ -47,6 +49,8 @@
 		05178F941CE6602500232091 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		05178F981CE6609E00232091 /* TravelHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelHistoryTableViewController.swift; sourceTree = "<group>"; };
 		05178F9A1CE660AB00232091 /* TravelHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		05F9BC5F1CFD602B00C3C457 /* BrowseMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseMapViewController.swift; sourceTree = "<group>"; };
+		05F9BC631CFD694400C3C457 /* SearchForLocationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchForLocationTableViewController.swift; sourceTree = "<group>"; };
 		3064118F1CF27C6100057D7C /* StateData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateData.swift; sourceTree = "<group>"; };
 		306411911CF27C9300057D7C /* StatesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatesTableViewController.swift; sourceTree = "<group>"; };
 		306411931CF27D6A00057D7C /* State+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "State+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -96,7 +100,7 @@
 				05E4843F1CEBFD0600EBF4F8 /* Travel */,
 				05E484401CEBFD1000EBF4F8 /* Photos */,
 				05F9BC5E1CFD54A400C3C457 /* Doodle */,
-				05E484411CEBFD1F00EBF4F8 /* MajorCities */,
+				05E484411CEBFD1F00EBF4F8 /* Map */,
 				05178F861CE6550700232091 /* SupportingFiles */,
 				05178F871CE6551100232091 /* CoreData */,
 			);
@@ -151,13 +155,15 @@
 			name = Photos;
 			sourceTree = "<group>";
 		};
-		05E484411CEBFD1F00EBF4F8 /* MajorCities */ = {
+		05E484411CEBFD1F00EBF4F8 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				05F9BC631CFD694400C3C457 /* SearchForLocationTableViewController.swift */,
+				05F9BC5F1CFD602B00C3C457 /* BrowseMapViewController.swift */,
 				30BBCD601CF6C413009E3AD9 /* StateMapViewController.swift */,
 				306411911CF27C9300057D7C /* StatesTableViewController.swift */,
 			);
-			name = MajorCities;
+			name = Map;
 			sourceTree = "<group>";
 		};
 		05F9BC5E1CFD54A400C3C457 /* Doodle */ = {
@@ -242,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05178F991CE6609E00232091 /* TravelHistoryTableViewController.swift in Sources */,
+				05F9BC601CFD602B00C3C457 /* BrowseMapViewController.swift in Sources */,
 				306411A01CF2899100057D7C /* NewTripViewController.swift in Sources */,
 				306411921CF27C9300057D7C /* StatesTableViewController.swift in Sources */,
 				306411991CF27D6A00057D7C /* State+CoreDataProperties.swift in Sources */,
@@ -251,6 +258,7 @@
 				306411A41CF3BD6E00057D7C /* CoreDataTableViewController.swift in Sources */,
 				3064119B1CF27D6A00057D7C /* City+CoreDataProperties.swift in Sources */,
 				05178F741CE654F700232091 /* ViewController.swift in Sources */,
+				05F9BC641CFD694400C3C457 /* SearchForLocationTableViewController.swift in Sources */,
 				306411AA1CF3F1BD00057D7C /* DoodleView.swift in Sources */,
 				3064119E1CF27D6A00057D7C /* Trip.swift in Sources */,
 				306411901CF27C6100057D7C /* StateData.swift in Sources */,

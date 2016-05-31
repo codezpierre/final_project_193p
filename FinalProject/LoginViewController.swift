@@ -7,6 +7,7 @@
 //
 
 //used ideas from both https://www.youtube.com/watch?v=cpANieebE2M and http://studyswift.blogspot.com/2016/01/facebook-sdk-and-swift-create-facebook.html but both were modified
+//frameworks and additional instructions from https://developers.facebook.com/docs/facebook-login/ios
 
 import UIKit
 import FBSDKLoginKit
@@ -24,10 +25,10 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
+    // MARK: Facebook API
+    
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         print("succesfully logged in")
         self.performSegueWithIdentifier("enterApp", sender: self)
@@ -40,15 +41,4 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         //empty
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

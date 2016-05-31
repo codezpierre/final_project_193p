@@ -115,6 +115,7 @@
 				053C58BD1CFE08E50042081C /* FBSDKMessengerShareKit.framework */,
 				053C58BE1CFE08E50042081C /* FBSDKShareKit.framework */,
 				053C58AF1CFE04540042081C /* LoginViewController.swift */,
+				053C58C51CFE54E10042081C /* Orient Yourself */,
 				05178F751CE654F700232091 /* Main.storyboard */,
 				05E4843F1CEBFD0600EBF4F8 /* Travel */,
 				05E484401CEBFD1000EBF4F8 /* Photos */,
@@ -154,6 +155,15 @@
 			name = CoreData;
 			sourceTree = "<group>";
 		};
+		053C58C51CFE54E10042081C /* Orient Yourself */ = {
+			isa = PBXGroup;
+			children = (
+				05F9BC631CFD694400C3C457 /* SearchForLocationTableViewController.swift */,
+				05F9BC5F1CFD602B00C3C457 /* BrowseMapViewController.swift */,
+			);
+			name = "Orient Yourself";
+			sourceTree = "<group>";
+		};
 		05E4843F1CEBFD0600EBF4F8 /* Travel */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,8 +187,6 @@
 		05E484411CEBFD1F00EBF4F8 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				05F9BC631CFD694400C3C457 /* SearchForLocationTableViewController.swift */,
-				05F9BC5F1CFD602B00C3C457 /* BrowseMapViewController.swift */,
 				30BBCD601CF6C413009E3AD9 /* StateMapViewController.swift */,
 				306411911CF27C9300057D7C /* StatesTableViewController.swift */,
 			);

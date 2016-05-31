@@ -10,15 +10,13 @@ import UIKit
 import MapKit
 
 class StateMapViewController: UIViewController {
-    
+
     var city: String?
     let regionRadius: CLLocationDistance = 1000
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBOutlet weak var mapView: MKMapView!
@@ -29,22 +27,22 @@ class StateMapViewController: UIViewController {
     }
     
     private func updateUI() {
-    let geocoder = CLGeocoder()
+        let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(self.city!, completionHandler: { [weak weakSelf = self](placemark: [CLPlacemark]?, error: NSError?) -> Void in
             weakSelf!.centerMapOnLocation(placemark![0].location!)
-        })
+            })
     }
     
     
-
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
+

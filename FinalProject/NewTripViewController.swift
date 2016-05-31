@@ -72,10 +72,29 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewWillAppear(animated: Bool) {
         if savedDepartDate != nil {
-            departDateLabel.text = "\(savedDepartDate!)"
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateStyle = .MediumStyle
+            dateFormatter.timeStyle = .NoStyle
+            
+            let date = NSDate(timeIntervalSinceReferenceDate: 118800)
+            
+            // US English Locale (en_US)
+            dateFormatter.locale = NSLocale(localeIdentifier: "en_US")
+            NSLog("%@", dateFormatter.stringFromDate(date)) // Jan 2, 2001
+
+            departDateLabel.text = dateFormatter.stringFromDate(savedDepartDate!) ?? "Depart Date"
         }
         if savedReturnDate != nil {
-            returnDateLabel.text = "\(savedReturnDate!)"
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateStyle = .MediumStyle
+            dateFormatter.timeStyle = .NoStyle
+            
+            let date = NSDate(timeIntervalSinceReferenceDate: 118800)
+            
+            // US English Locale (en_US)
+            dateFormatter.locale = NSLocale(localeIdentifier: "en_US")
+            NSLog("%@", dateFormatter.stringFromDate(date)) // Jan 2, 2001
+            returnDateLabel.text = dateFormatter.stringFromDate(savedReturnDate!) ?? "Return Date"
         }
     }
     
@@ -127,8 +146,6 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
                               animated: true,
                               completion: nil)
     }
-    
-    
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "unwindFromNewTripDone" {

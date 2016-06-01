@@ -127,6 +127,7 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
             picker.sourceType = UIImagePickerControllerSourceType.Camera
             picker.cameraCaptureMode = .Photo
             picker.modalPresentationStyle = .FullScreen
+            picker.delegate = self
             presentViewController(picker,
                                   animated: true,
                                   completion: nil)

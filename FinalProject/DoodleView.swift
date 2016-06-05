@@ -6,6 +6,8 @@
 //  Copyright © 2016 Sarah Radzihovsky. All rights reserved.
 //
 
+// I (Sarah) got ideas from http://stackoverflow.com/questions/26662415/draw-a-line-with-uibezierpath and Andrew Fang
+
 import UIKit
 
 class DoodleView: UIView {

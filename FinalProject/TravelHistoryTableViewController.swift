@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 
 class TravelHistoryTableViewController: UITableViewController, UITextFieldDelegate {
+    private var cellSize: CGSize? = nil
     
     var trips: [Trip]? {
         didSet{
@@ -75,5 +76,13 @@ class TravelHistoryTableViewController: UITableViewController, UITextFieldDelega
     
     //unwinding from NewTripPickerVC
     @IBAction func saveNewTrip(unwindsegue: UIStoryboardSegue) {
+    }
+    
+    private func calculateCellSize() {
+        let tempImage = UIImage(named: "photoNotAvailable")
+        let scaleFactor = tableView!.frame.width/2.5/tempImage!.size.width
+        var tempSize = CGSize(width: tempImage!.size.width*scaleFactor, height: tempImage!.size.height*scaleFactor)
+        tempSize.height += tempSize.width/3.5
+        cellSize = tempSize
     }
 }

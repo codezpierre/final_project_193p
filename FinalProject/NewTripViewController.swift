@@ -8,6 +8,8 @@
 
 //Isaiah and Amy helped me a little with the UIAlertAction
 //date formatting help came from https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/
+//default photo from http://berg-group.com/wp-content/uploads/2014/11/Photo_not_available-4.jpg
+//camera bug was cleared up by http://www.ioscreator.com/tutorials/take-photo-tutorial-ios8-swift
 
 
 import UIKit
@@ -23,6 +25,9 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var returnDateLabel: UILabel!
     
     let picker = UIImagePickerController()
+    
+    private var aspectRatioConstraint: NSLayoutConstraint?
+
     
     @IBAction func cancel(sender: AnyObject) {
         let alert = UIAlertController(
@@ -52,6 +57,27 @@ class NewTripViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
         set {
             imageView?.image = newValue
+            // remove any existing aspect ratio constraint on the imageView
+            if aspectRatioConstraint != nil {
+                imageView.removeConstraint(aspectRatioConstraint!)
+                aspectRatioConstraint = nil
+            }
+            // add a new aspect ratio constraint on the imageView
+            // the imageView will be constrained to have the same aspect ratio as its image
+            // this code should look very similar to an inspected constraint in Interface Builder
+            if let image = newValue, let imageView = imageView {
+                let aspectRatio = image.size.width / image.size.height
+                aspectRatioConstraint = NSLayoutConstraint(
+                    item: imageView,
+                    attribute: .Width,
+                    relatedBy: .Equal,
+                    toItem: imageView,
+                    attribute: .Height,
+                    multiplier: aspectRatio,
+                    constant: 0
+                )
+                imageView.addConstraint(aspectRatioConstraint!)
+            }
         }
     }
     

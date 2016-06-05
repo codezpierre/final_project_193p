@@ -6,7 +6,7 @@
 //  Copyright © 2016 Sarah Radzihovsky. All rights reserved.
 //
 
-//followed tutorial from http://www.thorntech.com/2016/01/how-to-search-for-location-using-apples-mapkit/ to set up this view
+//help from http://www.thorntech.com/2016/01/how-to-search-for-location-using-apples-mapkit/ to set up this view
 
 import UIKit
 import MapKit

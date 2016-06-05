@@ -6,6 +6,8 @@
 //  Copyright © 2016 Sarah Radzihovsky. All rights reserved.
 //
 
+//ideas on search bar from https://grokswift.com/swift-tableview-search-bar/  and http://www.thorntech.com/2016/01/how-to-search-for-location-using-apples-mapkit/
+
 import UIKit
 import MapKit
 
